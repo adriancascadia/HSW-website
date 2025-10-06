@@ -20,12 +20,12 @@ import photo from "../assets/MunicipalTapWater.webp";
 
           <!-- Imagen (superpuesta sobre la banda) -->
           <figure
-            class="relative z-10 -mt-10 shadow-xl overflow-hidden border border-black/5"
+            class="relative z-10 -mt-10 shadow-xl overflow-hidden border border-black/5 rounded-3xl"
           >
             <img
               src={photo.src}
               alt="HSW bottles"
-              class="block w-full h-[360px] md:h-[420px] object-cover"
+              class="block w-full h-[360px] md:h-[420px] object-cover transition-transform duration-500 ease-[cubic-bezier(.2,.8,.2,1)] hover:scale-[1.05] will-change-transform"
               loading="eager"
             />
 
@@ -37,11 +37,11 @@ import photo from "../assets/MunicipalTapWater.webp";
         </div>
 
         <!-- Texto simulado abajo -->
-        <div class="mt-8 text-xl leading-relaxed text-gray-700">
+        <div class="mt-8 text-2xl text-center leading-relaxed text-gray-700">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
-            ipsum suspendisse ultrices gravida.
+            It’s right there on the label, but most people never notice.<br />
+The water in many bottles comes straight from the municipal supply.<br />
+At HSW, we believe you deserve to see the truth clearly.
           </p>
         </div>
       </section>

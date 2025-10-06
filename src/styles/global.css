@@ -8,8 +8,11 @@
 
 :root {
 	--accent:  #00a0b0;
-	--accent-dark: #000d8a;
+	--accent-dark: #272727;
+	--aquasky: #65c3ca;
+	--powderblue: #b9e0e7;
 	--light: #b9e0e7;
+	--tangerine: #f8991d;
 	--black: 15, 18, 25;
 	--gray: 96, 115, 159;
 	--gray-light: 229, 233, 240;
@@ -46,15 +49,12 @@ body {
 	padding: 0;
 	text-align: left;
 	background: linear-gradient(var(--light)) no-repeat;
-	background-size: 100% 600px;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	color: rgb(var(--gray-dark));
 }
 main {
-	max-width: calc(100% - 2em);
 	margin: auto;
-	padding: 3em 1em;
 }
 
 strong,

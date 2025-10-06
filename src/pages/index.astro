@@ -1,53 +1,93 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
-import Card from "../components/Card.astro";
-import Card2 from "../components/Card.astro";
-import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+import ThreeDViewer from "../components/3DViewer";
+import Carousel from "../components/Carousel.astro";
+import Layout from "../layouts/Layout.astro";
+
+const modelPath = "src/assets/models/HSWBottle.obj";
 ---
+<Layout>
+      <section class="min-h-screen bg-[url('../assets/blog-placeholder-5.jpg')] bg-cover bg-center">
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-    <meta charset="UTF-8" />
-    <title>Objeto 3D</title>
-  </head>
-  <body>
-    <Header />
-    <main>
-      
-      <div class="mx-auto max-w-6xl px-4 py-10 md:py-5">
-    <!-- Header -->
-    <div class="grid gap-10 md:grid-cols-2 md:items-start">
-      <!-- Izquierda -->
-      <div class="space-y-4">
-        <h1 class="font-extrabold text-[12vw] leading-[0.8] md:text-9xl tracking-tight bg-clip-text text-transparent bg-gradient-to-br from-gray-900 to-gray-700">
-          Why<br />HSW
-        </h1>
-        <div class="h-1 w-24 rounded-full bg-[color:var(--accent)]/80"></div>
-      </div>
+        <!-- Soft gradient background blobs -->
+        <div class="pointer-events-none absolute inset-0 -z-10">
+          <div
+            class="absolute -top-32 -left-24 h-72 w-72 rounded-full bg-sky-400/30 blur-3xl"
+          >
+          </div>
+          <div
+            class="absolute -bottom-24 -right-16 h-72 w-72 rounded-full bg-[color:var(--accent)]-400/30 blur-3xl"
+          >
+          </div>
+        </div>
 
-      <!-- Derecha -->
-      <div class="max-w-md md:ml-auto self-start">
-        <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900">
-          Never Filtered tap.<br class="hidden sm:block" />Never Tankered.
-        </h2>
-        <p class="mt-3 text-[11px] md:text-xs font-semibold uppercase text-[color:var(--accent)] tracking-[0.2em]">
-          Hawaiian Springs Water
+        <div
+          class="mx-auto max-w-7xl px-6 pt-24 pb-20 md:pt-32 md:pb-28 lg:px-8"
+        >
+          <!-- Eyebrow / badge -->
+          <div
+            class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/60 px-3 py-1 text-xl font-medium text-zinc-700 shadow-sm backdrop-blur dark:border-white/10 dark:bg-white/10"
+          >
+            <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
+            Artesian Water
+          </div>
+
+          <!-- Heading -->
+          <h1
+            class="mt-6 text-balance text-4xl font-bold tracking-tight text-zinc-900 md:text-6xl dark:text-white"
+          >
+            Never Filtered Tap. Never Tankered. <br />
+            <span
+              class="bg-gradient-to-tr from-[color:var(--accent)] via-[color:var(--light)] to-[color:var(--accentdark)] bg-clip-text text-transparent"
+              >Hawaiian Springs Water</span
+            >
+          </h1>
+
+          <!-- Subheading -->
+          <p
+            class="mt-6 max-w-2xl text-pretty text-base leading-7 md:text-lg "
+          >
+            A modern toolkit to craft fast, accessible and delightful web apps.
+            Backed by robust APIs, clean design primitives and first‑class
+            developer ergonomics.
+          </p>
+
+          <!-- Call to actions -->
+          <div class="mt-8 flex flex-wrap items-center gap-3">
+            <a
+              href="#get-started"
+              class="inline-flex items-center justify-center rounded-xl bg-zinc-900 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:opacity-90 active:translate-y-px dark:bg-white dark:text-zinc-900"
+            >
+              Buy Now
+            </a>
+            <a
+              href="#contact"
+              class="inline-flex items-center justify-center rounded-xl border border-zinc-300/70 bg-white/70 px-5 py-3 text-sm font-semibold text-zinc-700 shadow-sm backdrop-blur transition hover:bg-white active:translate-y-px dark:border-white/20 dark:bg-white/10 dark:text-zinc-200"
+            >
+              Know More
+            </a>
+          </div>
+
+
+        <!-- Decorative divider -->
+        <div
+          class="mx-auto h-px max-w-7xl bg-gradient-to-r from-transparent via-zinc-200 to-transparent dark:via-white/10"
+        >
+        </div>
+
+        <p class="mb-8 text-lg text-gray-600">
+            El modelo OBJ a continuación es cargado por una "isla" de React y Three.js, y el contenedor está estilizado con clases de Tailwind 4.
         </p>
-        <p class="mt-3 text-lg md:text-xl text-gray-700">
-          Hawaiian Springs Water will be perceived as the purest, most refreshing,
-          and truly authentic bottled water.
-        </p>
-      </div>
-    </div>
-      <Card />
-      <Card2 />
-      
-    </main>
 
-    <Footer />
-  </body>
-</html>
+        <div class=" ">
+            <ThreeDViewer modelPath={modelPath} client:visible />
+        </div>
+
+        <div class="mt-8">
+            <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+                Botón con Estilos Tailwind
+            </button>
+        </div>
+      </section>
+
+      <Carousel title="hola" />
+</Layout>
