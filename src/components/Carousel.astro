@@ -59,10 +59,10 @@ const { title } = Astro.props;
               />
 
               {/* Gradient mask */}
-              <div class="hidden md:block absolute rounded-xl overflow-hidden w-full h-full object-cover object-left inset-0 bg-gradient-to-r from-bs-surface-0/90 via-bs-surface-0/60"></div>
+              <div class="hidden md:block absolute rounded-xl overflow-hidden w-full h-full object-cover object-left inset-0 bg-gradient-to-r from-bs-surface-0/90 via-bs-surface-0/60 boldtext"></div>
 
               {/* Content */}
-              <figcaption class="z-10 p-6 sm:p-10 md:p-20 max-w-xl flex flex-col gap-6 h-full">
+              <figcaption class="z-10 p-6 sm:p-10 md:p-20 max-w-xl flex flex-col gap-6 h-full text-[color:var(--accent-dark)]">
                 {/* Title */}
                 <h2 class="bs-h2 text-3xl" set:html={item.title} />
 
