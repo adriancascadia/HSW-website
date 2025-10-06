@@ -1,56 +1,48 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import CardTwo from "../components/CardTwo.astro";
 import CardThree from "../components/CardThree.astro";
 import CardHSW from "../components/CardHSW.astro";
-import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-    <meta charset="UTF-8" />
-    <title>Objeto 3D</title>
-  </head>
-  <body>
-    <Header />
-    <main>
-      
-      <div class="mx-auto max-w-6xl px-4 py-10 md:py-5">
-    <!-- Header -->
-    <div class="grid gap-10 md:grid-cols-2 md:items-start">
-      <!-- Izquierda -->
-      <div class="space-y-4">
-        <h1 class="font-extrabold text-[12vw] leading-[0.8] md:text-9xl tracking-tight bg-clip-text text-transparent bg-gradient-to-br from-gray-900 to-gray-700">
-          Artesian<br />Water
-        </h1>
-        <div class="h-1 w-24 rounded-full bg-[color:var(--accent)]/80"></div>
-      </div>
+<Layout>
+  <div>
+    <div class="mx-auto max-w-6xl px-4 py-10 md:py-5">
+      <!-- Header -->
+      <div class="grid gap-10 md:grid-cols-2 md:items-start">
+        <!-- Izquierda -->
+        <div class="space-y-4">
+          <h1
+            class="font-extrabold text-[12vw] leading-[0.8] md:text-9xl tracking-tight bg-clip-text text-transparent bg-gradient-to-br from-gray-900 to-gray-700"
+          >
+            Artesian<br />Water
+          </h1>
+          <div class="h-1 w-24 rounded-full bg-[color:var(--accent)]/80"></div>
+        </div>
 
-      <!-- Derecha -->
-      <div class="max-w-md md:ml-auto self-start">
-        <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900">
-          Never Filtered tap.<br class="hidden sm:block" />Never Tankered.
-        </h2>
-        <p class="mt-3 text-[11px] md:text-xs font-semibold uppercase text-[color:var(--accent)] tracking-[0.2em]">
-          Hawaiian Springs Water
-        </p>
-        <p class="mt-3 text-lg md:text-xl text-gray-700">
-          Hawaiian Springs Water will be perceived as the purest, most refreshing,
-          and truly authentic bottled water.
-        </p>
+        <!-- Derecha -->
+        <div class="max-w-md md:ml-auto self-start">
+          <h2
+            class="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900"
+          >
+            Never Filtered tap.<br class="hidden sm:block" />Never Tankered.
+          </h2>
+          <p
+            class="mt-3 text-[11px] md:text-xs font-semibold uppercase text-[color:var(--accent)] tracking-[0.2em]"
+          >
+            Hawaiian Springs Water
+          </p>
+          <p class="mt-3 text-lg md:text-xl text-gray-700">
+            Hawaiian Springs Water will be perceived as the purest, most
+            refreshing, and truly authentic bottled water.
+          </p>
+        </div>
       </div>
-    </div>
       <Card />
       <CardTwo />
       <CardThree />
       <CardHSW />
-    </main>
-
-    <Footer />
-  </body>
-</html>
+    </div>
+  </div>
+</Layout>

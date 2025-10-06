@@ -1,29 +1,29 @@
 [
   {
     "title": "Never Filtered Tap",
-    "content": "<strong>Great companies are built on their ability to adapt and grow.</strong> We create brands that will adapt and flourish no matter where the market takes you.",
-    "cta": "Call us about branding",
+    "content": "Hawaiian Springs is <strong>Natural Artesian Water</strong>, not purified or filtered tap water. It is drawn from a deep aquifer in <strong>Mauna Loa</strong>, ensuring a purity and taste that is <strong>untouched by human hands</strong> until you open the bottle.",
+    "cta": "Know More",
     "image": "/content-images/blackspike-wallpaper-01.avif",
     "image_alt": ""
   },
   {
     "title": "Never Tankered",
-    "content": "<strong>Experts in imagining future interfaces and experiences.</strong> From UX to creative to analytics, we are there every step of the way.",
-    "cta": "Book a website review call",
+    "content": "We are the <strong>ONLY Hawaiian artesian water</strong> that is bottled exclusively <strong>at the source</strong> (Kea’au, Big Island). This ensures that the purity, pH, and mineral profile remain intact, avoiding the risk of degradation associated with <strong>bulk transportation</strong>.",
+    "cta": "Buy Now",
     "image": "/content-images/blackspike-wallpaper-02.avif",
     "image_alt": ""
   },
   {
-    "title": "Design across all dimensions",
-    "content": "<strong>Outstanding 3D design and concepts.</strong> We provide top-of-the-line 3D modelling services delivered by our skilled team of 3D artists.",
-    "cta": "Our 3D Services",
+    "title": "Filtered by Lava Rock",
+    "content": "Heavenly rainfall is naturally filtered through <strong>13,000 feet of pristine volcanic lava rock</strong>. This natural purification process infuses the water with <strong>unique electrolytes and minerals</strong>, including a high content of **silica ($\text{37mg/L}$)**.",
+    "cta": "Our Source",
     "image": "/content-images/blackspike-wallpaper-03.avif",
     "image_alt": ""
   },
   {
-    "title": "Apps for all devices and seasons",
-    "content": "<strong>We help companies supercharge their apps by providing world-class, effective design.</strong> Best practice design processes for your products",
-    "cta": "Arrange an app demo",
+    "title": "Natural Artesian Water",
+    "content": "Enjoy optimal hydration with a <strong>naturally alkaline pH of $\text{7.7+}$</strong>. This composition, with its blend of minerals like silica, calcium, and magnesium, delivers a <strong>clean, soft, and slightly sweet taste</strong>.",
+    "cta": "Our Water",
     "image": "/content-images/blackspike-wallpaper-04.avif",
     "image_alt": ""
   }

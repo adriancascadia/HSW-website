@@ -3,56 +3,45 @@ import ThreeDViewer from "../components/3DViewer";
 import Carousel from "../components/Carousel.astro";
 import Layout from "../layouts/Layout.astro";
 
-const modelPath = "src/assets/models/HSWBottle.obj";
+const modelPath = "/models/HSWBottle.obj";
 ---
 <Layout>
-      <section class="min-h-screen bg-[url('../assets/blog-placeholder-5.jpg')] bg-cover bg-center">
-
-        <!-- Soft gradient background blobs -->
-        <div class="pointer-events-none absolute inset-0 -z-10">
-          <div
-            class="absolute -top-32 -left-24 h-72 w-72 rounded-full bg-sky-400/30 blur-3xl"
-          >
-          </div>
-          <div
-            class="absolute -bottom-24 -right-16 h-72 w-72 rounded-full bg-[color:var(--accent)]-400/30 blur-3xl"
-          >
-          </div>
-        </div>
+      <section class="bg-[url('../assets/blog-placeholder-5.jpg')] bg-cover bg-center pb-10">
 
         <div
-          class="mx-auto max-w-7xl px-6 pt-24 pb-20 md:pt-32 md:pb-28 lg:px-8"
+          class=" px-6 pt-5"
         >
           <!-- Eyebrow / badge -->
           <div
             class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/60 px-3 py-1 text-xl font-medium text-zinc-700 shadow-sm backdrop-blur dark:border-white/10 dark:bg-white/10"
           >
             <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
-            Artesian Water
+            Natural Artesian Water
           </div>
 
-          <!-- Heading -->
+          <div class="">
           <h1
-            class="mt-6 text-balance text-4xl font-bold tracking-tight text-zinc-900 md:text-6xl dark:text-white"
+            class="mt-6 text-balance text-4xl font-bold tracking-tight md:text-6xl text-[color:var(--accent)]"
           >
             Never Filtered Tap. Never Tankered. <br />
             <span
-              class="bg-gradient-to-tr from-[color:var(--accent)] via-[color:var(--light)] to-[color:var(--accentdark)] bg-clip-text text-transparent"
+              class="bg-gradient-to-tr from-[color:var(--accent-dark)] via-[color:var(--tangerine)] to-[color:var(--accent-dark)] bg-clip-text text-transparent"
               >Hawaiian Springs Water</span
             >
           </h1>
-
           <!-- Subheading -->
           <p
-            class="mt-6 max-w-2xl text-pretty text-base leading-7 md:text-lg "
+            class="mt-6 max-w-2xl text-pretty text-white   text-base leading-7 md:text-2xl "
           >
-            A modern toolkit to craft fast, accessible and delightful web apps.
-            Backed by robust APIs, clean design primitives and first‑class
-            developer ergonomics.
+            Hawaiian rain is naturally filtered through 13,000 feet of pristine Mauna Loa lava rock. Bottled at the source, this artesian water delivers a clean, smooth taste and a perfect natural pH. <strong>Experience the authentic purity of Hawaii.</strong>
           </p>
+          <div class=" ">
+            <ThreeDViewer modelPath={modelPath} client:visible />
+          </div>
+          </div>
 
           <!-- Call to actions -->
-          <div class="mt-8 flex flex-wrap items-center gap-3">
+          <div class="mt-8 flex flex-wrap items-center gap-3 justify-center">
             <a
               href="#get-started"
               class="inline-flex items-center justify-center rounded-xl bg-zinc-900 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:opacity-90 active:translate-y-px dark:bg-white dark:text-zinc-900"
@@ -74,20 +63,12 @@ const modelPath = "src/assets/models/HSWBottle.obj";
         >
         </div>
 
-        <p class="mb-8 text-lg text-gray-600">
-            El modelo OBJ a continuación es cargado por una "isla" de React y Three.js, y el contenedor está estilizado con clases de Tailwind 4.
-        </p>
-
-        <div class=" ">
-            <ThreeDViewer modelPath={modelPath} client:visible />
-        </div>
-
-        <div class="mt-8">
+        <!-- <div class="mt-8">
             <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300">
                 Botón con Estilos Tailwind
             </button>
-        </div>
+        </div> -->
       </section>
 
-      <Carousel title="hola" />
+      <Carousel title="WHY HSW" />
 </Layout>
