@@ -74,10 +74,15 @@ nav {
 	justify-content: space-between;
 }
 
+.social-links {
+	gap: 0.1em;
+}
 
 .social-links,
 .social-links a {
 	display: flex;
+	padding: 0;
+	margin: 0;
 }
 
 
