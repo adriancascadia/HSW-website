@@ -9,7 +9,7 @@ const { title } = Astro.props;
   <div
     class="bs-container flex items-center justify-between py-6 md:py-10 px-6 md:px-6"
   >
-    {title && <h2 class="bs-h2 text-5xl  boldtext">{title}</h2>}
+    {title && <h2 class="bs-h2 text-5xl md:text-7xl  boldtext text-[color:var(--accent)]">{title}</h2>}
 
     <!-- Buttons -->
     <nav class="bs-st-button-wrapper flex justify-center gap-4">
@@ -53,7 +53,7 @@ const { title } = Astro.props;
                 src={item.image}
                 alt={item.image_alt}
                 loading="lazy"
-                class="opacity-20 md:opacity-80 rounded-xl grayscale overflow-hidden w-full h-full object-cover object-left absolute inset-0"
+                class={`rounded-xl ${item.competitors ? 'opacity-40 md:opacity-80 grayscale' : 'opacity-100 full-color'} overflow-hidden w-full h-full object-cover object-left absolute inset-0`}
                 height="1024"
                 width="768"
               />
@@ -62,7 +62,7 @@ const { title } = Astro.props;
               <div class="hidden md:block absolute rounded-xl overflow-hidden w-full h-full object-cover object-left inset-0 bg-gradient-to-r from-bs-surface-0/90 via-bs-surface-0/60 boldtext"></div>
 
               {/* Content */}
-              <figcaption class="z-10 p-6 sm:p-10 md:p-20 max-w-xl flex flex-col gap-6 h-full text-[color:var(--accent-dark)]">
+              <figcaption class={`z-10 p-6 sm:p-10 md:p-20 max-w-xl flex flex-col gap-6 h-full ${item.competitors ? 'text-[color:var(--accent-dark)]' : 'text-white'}`}>
                 {/* Title */}
                 <h2 class="bs-h2 text-3xl" set:html={item.title} />
 
