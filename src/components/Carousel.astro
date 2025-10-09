@@ -7,9 +7,9 @@ const { title } = Astro.props;
 <section id="cases">
   <!-- Header -->
   <div
-    class="bs-container flex items-center justify-between py-6 md:py-10 px-6 md:px-6"
+    class="bs-container flex items-center justify-between"
   >
-    {title && <h2 class="bs-h2 text-5xl md:text-7xl  boldtext text-[color:var(--accent)]">{title}</h2>}
+    { title && <h2 class="bs-h2 text-center md:text-left" set:html={ title } />}
 
     <!-- Buttons -->
     <nav class="bs-st-button-wrapper flex justify-center gap-4">
@@ -53,16 +53,18 @@ const { title } = Astro.props;
                 src={item.image}
                 alt={item.image_alt}
                 loading="lazy"
-                class={`rounded-xl ${item.competitors ? 'opacity-40 md:opacity-80 grayscale' : 'opacity-100 full-color'} overflow-hidden w-full h-full object-cover object-left absolute inset-0`}
+                class={`rounded-xl ${item.competitors ? "opacity-40 md:opacity-80 grayscale" : "opacity-100 full-color"} overflow-hidden w-full h-full object-cover object-left absolute inset-0`}
                 height="1024"
                 width="768"
               />
 
               {/* Gradient mask */}
-              <div class="hidden md:block absolute rounded-xl overflow-hidden w-full h-full object-cover object-left inset-0 bg-gradient-to-r from-bs-surface-0/90 via-bs-surface-0/60 boldtext"></div>
+              <div class="hidden md:block absolute rounded-xl overflow-hidden w-full h-full object-cover object-left inset-0 bg-gradient-to-r from-bs-surface-1/90 via-bs-surface-3/20 boldtext" />
 
               {/* Content */}
-              <figcaption class={`z-10 p-6 sm:p-10 md:p-20 max-w-xl flex flex-col gap-6 h-full ${item.competitors ? 'text-[color:var(--accent-dark)]' : 'text-white'}`}>
+              <figcaption
+                class={`z-10 p-6 sm:p-10 md:p-20 max-w-xl flex flex-col gap-6 h-full text-white`}
+              >
                 {/* Title */}
                 <h2 class="bs-h2 text-3xl" set:html={item.title} />
 
@@ -89,40 +91,7 @@ const { title } = Astro.props;
 </section>
 
 <script>
-  import Swiper from "swiper";
-  import "swiper/css";
-
-  const prev_btn = document.querySelector(".js-fc-btn-prev");
-  const next_btn = document.querySelector(".js-fc-btn-next");
-
-  const swiper = new Swiper(".js-fc-swiper", {
-    slidesPerView: 1.05,
-    spaceBetween: 8,
-    speed: 500,
-    loop: true,
-    centeredSlides: true,
-    breakpoints: {
-      "640": {
-        slidesPerView: 1.2,
-        spaceBetween: 32,
-      },
-      "1600": {
-        slidesPerView: 1.4,
-        spaceBetween: 64,
-      },
-      "1900": {
-        slidesPerView: 1.6,
-        spaceBetween: 64,
-      },
-    },
-  });
-
-  // Add event listeners to buttons
-  prev_btn.addEventListener("click", () => swiper.slidePrev());
-  next_btn.addEventListener("click", () => swiper.slideNext());
-
-  // Trigger swiper
-  swiper.init?.();
+  import "../scripts/carousel"
 </script>
 
 <style>

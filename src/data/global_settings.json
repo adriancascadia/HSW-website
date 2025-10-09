@@ -1,5 +1,5 @@
 {
-  "title": "blackspike astro landing page",
+  "title": "Natural Artesian Water",
   "description": "A free Astro landing theme made with Tailwind",
   "social_image": "/1200x630.jpg",
   "base_url": "h",
@@ -12,7 +12,7 @@
   "nav": [
     {
       "title": "Why HSW",
-      "link": "/#why-us"
+      "link": "/#cases"
     },
     {
       "title": "Our Source",
@@ -20,10 +20,10 @@
     },
     {
       "title": "Community",
-      "link": "/#pricing"
+      "link": "/#community"
     },
     {
-      "title": "About Us",
+      "title": "FAQ's",
       "link": "/#faq"
     }
   ],

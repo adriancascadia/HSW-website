@@ -1,86 +1,69 @@
 ---
-import ThreeDViewer from "../components/3DViewer";
-import Carousel from "../components/Carousel.astro";
 import Layout from "../layouts/Layout.astro";
 
-const modelPath = "/models/HSWBottle.obj";
+import Carousel from "../components/Carousel.astro";
+import HeroSection from "../components/HeroSection.astro";
+import FaqSection from "../components/FaqSection.astro"
+import TestimonialsSection from "../components/TestimonialsSection.astro";
+import WaterFiltration from "../components/WaterFiltration.astro";
+import global_settings from "../data/global_settings.json"
+import home from "../data/home.json";
+import cases from "../data/cases.json";
+import testimonials from "../data/testimonials.json"
+import faq from "../data/faq.json";
+import CardHSW from "../components/CardHSW.astro"
+
 ---
 
-<Layout>
-  <section
-    class="relative bg-[url('../assets/blog-placeholder-5.jpg')] bg-cover bg-center pb-10"
-  >
-    <div
-      class="absolute inset-0 bg-gradient-to-br from-black/90 to-transparent"
-    >
-    </div>
-    <div class="relative z-20 px-8 pt-1 md:px-20 md:pt-5">
-      <div class="">
-        <h1
-          class="mt-6 text-4xl font-bold tracking-tight md:text-6xl text-[color:var(--light)]"
-        >
-         Artesian Water <br />
-          <div
-            class="inline-flex items-center gap-2 rounded-full border border-white/40 bg-[color:var(--accent)]/60 px-3 py-1 text-xl font-medium text-white tracking-normal uppercase shadow-sm backdrop-blur"
-          >
-            <span class="h-1.5 w-1.5 rounded-full bg-white"></span>
-            Never Filtered Tap
-          </div>
-          <div
-            class="inline-flex items-center gap-2 rounded-full border border-white/40 bg-[color:var(--aquasky)]/60 px-3 py-1 text-xl font-medium text-white tracking-normal uppercase shadow-sm backdrop-blur"
-          >
-            <span class="h-1.5 w-1.5 rounded-full bg-white"></span>
-            Never Tankered
-          </div>
-        </h1>
-        <!-- Eyebrow / badge -->
+<Layout title={ global_settings.title }>
 
-        <p
-          class="mt-3 max-w-1xl text-pretty text-white text-base leading-5 md:leading-7 md:text-2xl"
-        >
-          Hawaiian rain is naturally filtered through 13,000 feet of pristine
-          Mauna Loa lava rock. Bottled at the source, this artesian water
-          delivers a clean, smooth taste and a perfect natural pH. <strong
-            >Experience the authentic purity of Hawaii.</strong
-          >
-        </p>
-        <div class="">
-          <ThreeDViewer modelPath={modelPath} client:visible />
-        </div>
-      </div>
+  <HeroSection
+    content={ home.hero_content }
+    settings={ global_settings }
+    title={ home.hero_title }
+  />
 
-      <!-- Call to actions -->
-      <div class="mt-8 flex flex-wrap items-center gap-3 justify-center">
-        <a
-          href="#get-started"
-          class="inline-flex items-center justify-center rounded-xl bg-zinc-900 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:opacity-90 active:translate-y-px dark:bg-white dark:text-zinc-900"
-        >
-          Buy Now
-        </a>
-        <a
-          href="#contact"
-          class="inline-flex items-center justify-center rounded-xl border border-zinc-300/70 bg-white/70 px-5 py-3 text-sm font-semibold text-zinc-700 shadow-sm backdrop-blur transition hover:bg-white active:translate-y-px dark:border-white/20 dark:bg-white/10 dark:text-zinc-200"
-        >
-          Know More
-        </a>
-      </div>
+  <Carousel
+    cases={ cases }
+    title={ home.cases_title }
+  />
 
-      <!-- Decorative divider -->
-      <div
-        class="mx-auto h-px max-w-7xl bg-gradient-to-r from-transparent via-zinc-200 to-transparent dark:via-white/10"
-      >
-      </div>
+  <WaterFiltration />
 
-      <!-- <div class="mt-8">
-            <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300">
-                Botón con Estilos Tailwind
-            </button>
-        </div> -->
-    </div>
-  </section>
-  <section class="bg-[color:var(--accent)">
-      <div class="pt-1 md:pt-5">
-        <Carousel title="WHY HSW" />
-      </div>
-    </section>
+  <CardHSW />
+
+  <!-- <ClientsSection
+    clients={ clients }
+    title={ home.clients_title }
+  />
+
+  <QuoteSection
+    cite={ home.quote_cite }
+    content={ home.quote_content }
+    image={ home.quote_image }
+    role={ home.quote_role }
+  />
+
+  <CaseStudiesSection
+    caseStudies={ caseStudies }
+    title={ home.case_studies_title }
+  />
+
+
+  <PricingSection
+    pricing={ pricing }
+    title={ home.pricing_title }
+  />
+
+  <NewsletterSection newsletter={newsletter} /> -->
+<TestimonialsSection
+    testimonials={ testimonials }
+    title={ home.testimonials_title }
+  />
+
+  <FaqSection
+    faq={ faq }
+    title={ home.faq_title }
+  />
 </Layout>
+

@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+/* Containers */
+.bs-container {
+  inline-size: min(92vw, 90rem);
+  margin-inline: auto;
+}
+
+/* Top Margins */
+.bs-mt-lg {
+  @apply mt-16 lg:mt-32
+}
+
+.bs-mt-md {
+  @apply mt-10 lg:mt-16
+}
+
+.bs-mt-sm {
+  @apply mt-6 lg:mt-8
+}
+
+.bs-mb-lg {
+  @apply mb-16 lg:mb-32
+}
+
+.bs-mb-md {
+  @apply mb-10 lg:mb-16
+}
+
+.bs-mb-sm {
+  @apply mb-6 lg:mb-8
+}

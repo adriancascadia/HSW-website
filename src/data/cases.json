@@ -1,5 +1,21 @@
 [
   {
+    "title": "Filtered by Lava Rock",
+    "content": "Heavenly rainfall is naturally filtered through <strong>13,000 feet of pristine volcanic lava rock</strong>. This natural purification process infuses the water with <strong>unique electrolytes and minerals</strong>, including a high content of silica.",
+    "cta": "Our Source",
+    "image": "/content-images/source.jpg",
+    "image_alt": "",
+    "competitors": false
+  },
+  {
+    "title": "Natural Artesian Water",
+    "content": "Enjoy optimal hydration with a <strong>naturally alkaline pH of 7.7. This composition, with its blend of minerals like silica, calcium, and magnesium, delivers a <strong>clean, soft, and slightly sweet taste</strong>.",
+    "cta": "Our Water",
+    "image": "/content-images/natural.jpg",
+    "image_alt": "",
+    "competitors": false
+  },
+  {
     "title": "Never Filtered Tap",
     "content": "Hawaiian Springs is <strong>Natural Artesian Water</strong>, not purified or filtered tap water. It is drawn from a deep aquifer in <strong>Mauna Loa</strong>, ensuring a purity and taste that is <strong>untouched by human hands</strong> until you open the bottle.",
     "cta": "Know More",
@@ -14,21 +30,5 @@
     "image": "/content-images/watertanker.jpg",
     "image_alt": "",
     "competitors": true
-  },
-  {
-    "title": "Filtered by Lava Rock",
-    "content": "Heavenly rainfall is naturally filtered through <strong>13,000 feet of pristine volcanic lava rock</strong>. This natural purification process infuses the water with <strong>unique electrolytes and minerals</strong>, including a high content of **silica ($\text{37mg/L}$)**.",
-    "cta": "Our Source",
-    "image": "/content-images/source.jpg",
-    "image_alt": "",
-    "competitors": false
-  },
-  {
-    "title": "Natural Artesian Water",
-    "content": "Enjoy optimal hydration with a <strong>naturally alkaline pH of $\text{7.7+}$</strong>. This composition, with its blend of minerals like silica, calcium, and magnesium, delivers a <strong>clean, soft, and slightly sweet taste</strong>.",
-    "cta": "Our Water",
-    "image": "/content-images/natural.jpg",
-    "image_alt": "",
-    "competitors": false
   }
 ]

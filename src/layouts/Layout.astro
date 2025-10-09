@@ -1,28 +1,38 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
-import FormattedDate from '../components/FormattedDate.astro';
-import Header from '../components/Header.astro';
-import '../styles/global.css';
+import "../assets/css/global.css";
+import "../assets/css/base.css";
+import "../assets/css/typography.css";
+import "../assets/css/layout.css";
+import "../assets/css/buttons.css";
+
+import global_settings from "../data/global_settings.json";
+
+import BaseHead from "../components/BaseHead.astro";
+import HeaderMain from "../components/HeaderMain.astro";
+import Footer from "../components/Footer.astro";
+import FormattedDate from "../components/FormattedDate.astro";
+import DialogModal from "../components/DialogModal.astro";
 
 const { title, description } = Astro.props;
-
-
 ---
 
 <html lang="en">
-	<head>
-		<BaseHead title={title} description={description} />
-	</head>
+  <head>
+    <BaseHead title={title} description={description} />
+  </head>
 
-	<body>
-		<Header />
-		<main >
-			<slot />
-		</main>
-		<Footer />
-		<script>
-			import "../scripts/menu.js";
-		</script>
-	</body>
+  <body id="top">
+    <a
+      class="fixed -top-20 focus-visible:top-0 p-3 bg-black/90 transition-all duration-300"
+      href="#main">Skip to content</a
+    >
+
+    <HeaderMain settings={global_settings} />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer />
+    <!-- Demo dialog modal -->
+    <DialogModal id="demo" content={global_settings.demo} />
+  </body>
 </html>
