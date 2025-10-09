@@ -5,69 +5,82 @@ import Layout from "../layouts/Layout.astro";
 
 const modelPath = "/models/HSWBottle.obj";
 ---
+
 <Layout>
-      <section class="bg-[url('../assets/blog-placeholder-5.jpg')] bg-cover bg-center pb-10">
-
-        <div
-          class=" px-20 pt-15"
+  <section
+    class="relative bg-[url('../assets/blog-placeholder-5.jpg')] bg-cover bg-center pb-10"
+  >
+    <div
+      class="absolute inset-0 bg-gradient-to-br from-black/90 to-transparent"
+    >
+    </div>
+    <div class="relative z-20 px-8 pt-1 md:px-20 md:pt-5">
+      <div class="">
+        <h1
+          class="mt-6 text-4xl font-bold tracking-tight md:text-6xl text-[color:var(--light)]"
         >
-          <div class="">
-          <h1
-            class="mt-6 text-balance text-4xl font-bold tracking-tight md:text-6xl text-[color:var(--accent-dark)]"
-          >
-            Never Filtered Tap. Never Tankered. <br />
-            <span
-              class="bg-gradient-to-tr from-[color:var(--aquasky)] via-[color:var(--accent)] to-[color:var(--aquasky)] bg-clip-text text-transparent"
-              >Hawaiian Springs Water</span
-            >
-          </h1>
-          <!-- Eyebrow / badge -->
+          Natural Artesian Water <br />
           <div
-            class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/60 px-3 py-1 text-xl font-medium text-zinc-700 shadow-sm backdrop-blur dark:border-white/10 dark:bg-white/10"
+            class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-[color:var(--accent)]/60 px-3 py-1 text-xl font-medium text-zinc-700 shadow-sm backdrop-blur"
           >
-            <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
-            Natural Artesian Water
+            <span class="h-1.5 w-1.5 rounded-full bg-white"></span>
+            <h2 class="text-white uppercase">Never Filtered Tap</h2>
           </div>
-          <p
-            class="mt-6 max-w-2xl text-pretty text-white   text-base leading-7 md:text-2xl "
+          <div
+            class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-[color:var(--aquasky)]/60 px-3 py-1 text-xl font-medium text-zinc-700 shadow-sm backdrop-blur"
           >
-            Hawaiian rain is naturally filtered through 13,000 feet of pristine Mauna Loa lava rock. Bottled at the source, this artesian water delivers a clean, smooth taste and a perfect natural pH. <strong>Experience the authentic purity of Hawaii.</strong>
-          </p>
-          <div class=" ">
-            <ThreeDViewer modelPath={modelPath} client:visible />
+            <span class="h-1.5 w-1.5 rounded-full bg-white"></span>
+            <h2 class="text-white uppercase">Never Tankered</h2>
           </div>
-          </div>
+        </h1>
+        <!-- Eyebrow / badge -->
 
-          <!-- Call to actions -->
-          <div class="mt-8 flex flex-wrap items-center gap-3 justify-center">
-            <a
-              href="#get-started"
-              class="inline-flex items-center justify-center rounded-xl bg-zinc-900 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:opacity-90 active:translate-y-px dark:bg-white dark:text-zinc-900"
-            >
-              Buy Now
-            </a>
-            <a
-              href="#contact"
-              class="inline-flex items-center justify-center rounded-xl border border-zinc-300/70 bg-white/70 px-5 py-3 text-sm font-semibold text-zinc-700 shadow-sm backdrop-blur transition hover:bg-white active:translate-y-px dark:border-white/20 dark:bg-white/10 dark:text-zinc-200"
-            >
-              Know More
-            </a>
-          </div>
-
-
-        <!-- Decorative divider -->
-        <div
-          class="mx-auto h-px max-w-7xl bg-gradient-to-r from-transparent via-zinc-200 to-transparent dark:via-white/10"
+        <p
+          class="mt-3 max-w-1xl text-pretty text-white text-base leading-5 md:leading-7 md:text-2xl"
         >
+          Hawaiian rain is naturally filtered through 13,000 feet of pristine
+          Mauna Loa lava rock. Bottled at the source, this artesian water
+          delivers a clean, smooth taste and a perfect natural pH. <strong
+            >Experience the authentic purity of Hawaii.</strong
+          >
+        </p>
+        <div class="">
+          <ThreeDViewer modelPath={modelPath} client:visible />
         </div>
+      </div>
 
-        <!-- <div class="mt-8">
+      <!-- Call to actions -->
+      <div class="mt-8 flex flex-wrap items-center gap-3 justify-center">
+        <a
+          href="#get-started"
+          class="inline-flex items-center justify-center rounded-xl bg-zinc-900 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:opacity-90 active:translate-y-px dark:bg-white dark:text-zinc-900"
+        >
+          Buy Now
+        </a>
+        <a
+          href="#contact"
+          class="inline-flex items-center justify-center rounded-xl border border-zinc-300/70 bg-white/70 px-5 py-3 text-sm font-semibold text-zinc-700 shadow-sm backdrop-blur transition hover:bg-white active:translate-y-px dark:border-white/20 dark:bg-white/10 dark:text-zinc-200"
+        >
+          Know More
+        </a>
+      </div>
+
+      <!-- Decorative divider -->
+      <div
+        class="mx-auto h-px max-w-7xl bg-gradient-to-r from-transparent via-zinc-200 to-transparent dark:via-white/10"
+      >
+      </div>
+
+      <!-- <div class="mt-8">
             <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300">
                 Botón con Estilos Tailwind
             </button>
         </div> -->
-        
-      </section>
-
-      <Carousel title="WHY HSW" />
+    </div>
+  </section>
+  <section class="bg-[color:var(--accent)">
+      <div class="pt-1 md:pt-5">
+        <Carousel title="WHY HSW" />
+      </div>
+    </section>
 </Layout>
