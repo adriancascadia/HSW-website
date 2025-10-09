@@ -140,19 +140,23 @@ nav a.active {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		padding: .5em 2em;
 	}
 
-	.header-nav {
+	nav {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: center;
 		width: 100%;
+		flex: 1;
 	}
 
 	.nav-links {
-		margin-left: 5em;
 		display: flex;
 		background: none;
+		justify-content: center;
+		align-items: center;
+		
 	}
 
 	.nav-links a {
