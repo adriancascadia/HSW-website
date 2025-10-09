@@ -5,8 +5,8 @@ import Logo from "./Logo.astro";
 import Social from "./Social.astro";
 ---
 
-<header class="flex flex-wrap items-center justify-between p-4 md:flex-nowrap">
-  <div class="flex w-full items-center justify-between md:w-auto">
+<header>
+  <div class="logo-button">
     <Logo />
     <BurgerMenu />
   </div>
@@ -15,7 +15,7 @@ import Social from "./Social.astro";
     <Navigation />
   </nav>
 
-  <div class="social-links w-full flex-col md:flex md:w-auto md:flex-row md:items-center hidden">
+  <div class="social-links">
     <Social />
   </div>
   
