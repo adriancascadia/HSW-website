@@ -1,24 +1,19 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
-import CardTwo from "../components/CardTwo.astro";
-import CardThree from "../components/CardThree.astro";
-import CardHSW from "../components/CardHSW.astro";
 import { Image } from "astro:assets";
 ---
 
 <Layout>
-  <div>
     <div class="mx-auto max-w-6xl px-4 py-10 md:py-5">
       <!-- Header -->
       <div class="grid gap-10 md:grid-cols-2 md:items-start">
         <!-- Izquierda -->
         <div class="space-y-4">
-          <h1
-            class="font-extrabold md:text-8xl tracking-tight bg-clip-text text-transparent bg-gradient-to-br from-gray-900 to-gray-700"
+          <h2
+            class="bs-h2 "
           >
-            Our<br />Community
-          </h1>
+            Oiiiur<br />Community
+          </h2>
           <div class="h-1 w-24 rounded-full bg-[color:var(--accent)]/80"></div>
         </div>
 
@@ -44,5 +39,4 @@ import { Image } from "astro:assets";
 		height={600	}
 		loading="eager"/>
     </div>
-  </div>
 </Layout>

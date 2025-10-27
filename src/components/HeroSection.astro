@@ -15,7 +15,7 @@ const modelPath = "/models/HSWBottle.obj";
     </div>
     <div class="relative z-20 px-8 pt-1 md:px-20 md:pt-5">
       <h1
-        class="mt-6 text-3xl md:text-6xl font-bold tracking-tight text-[color:var(--light)]"
+        class="mt-6 bs-h1 text-[color:var(--light)]"
       >
         Natural Artesian Water
       </h1>
@@ -43,7 +43,11 @@ const modelPath = "/models/HSWBottle.obj";
         >
       </p>
       <div class="">
-        <ThreeDViewer modelPath={modelPath} client:visible />
+        <ThreeDViewer 
+          modelPath={modelPath} 
+          bgImageUrl={bg_image}
+          client:visible 
+        />
       </div>
 
       <!-- Call to actions -->

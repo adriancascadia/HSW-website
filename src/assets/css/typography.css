@@ -2,11 +2,11 @@
 @reference "./global.css";
 
 .bs-h1 {
-  @apply font-display font-medium text-balance text-5xl md:text-6xl;
+  @apply font-display font-extrabold text-balance text-5xl md:text-6xl;
 }
 
 .bs-h2 {
-  @apply font-display font-medium text-balance text-3xl md:text-4xl;
+  @apply font-display font-extrabold text-balance text-4xl md:text-4xl;
 }
 
 .bs-h3 {
@@ -14,5 +14,5 @@
 }
 
 .bs-body-text {
-  @apply leading-relaxed;
+  @apply font-body leading-relaxed;
 }

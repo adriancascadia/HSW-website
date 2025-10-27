@@ -2,7 +2,7 @@
 
 @theme {
 
-  --font-display: var(--font-league-spartan), "league spartan";
+  --font-display: var(--font-league-spartan), "League Spartan";
   --font-body: var(--font-gidole), "ui-sans-serif", "system-ui", "sans-serif";
 
   --color-bs-surface-0: #eff8fa;
@@ -39,7 +39,7 @@
 
 @font-face {
 	font-family: "League Spartan";
-	src: url("/fonts/LeagueSpartan-VariableFont_wght.ttf") format("ttf");
+	src: url("/fonts/LeagueSpartan.ttf") format("ttf");
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
@@ -59,12 +59,6 @@
 	font-weight: 700;
 	font-style: normal;
 	font-display: swap;
-}
-
-body {
-	font-family: "League Spartan", sans-serif;
-	margin: 0;
-	padding: 0;
 }
 
 /* 
@@ -173,14 +167,14 @@ nav a.active {
 
 @media screen and (min-width: 992px) {
 	
-	/* header{
+	header{
 		display: flex;
 		flex-wrap: nowrap;
 		align-items: center;
 		justify-content: space-between;
 		padding: .5em 2em;
 		width: 100%;
-	} */
+	}
 
 	.logo-button {
 		display: flex;
@@ -199,6 +193,7 @@ nav a.active {
 		background: none;
 		justify-content: center;
 		align-items: center;
+		align-self: center;
 		
 	}
 

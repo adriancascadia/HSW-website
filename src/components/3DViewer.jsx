@@ -2,10 +2,12 @@ import React, { useRef, useEffect } from 'react';
 import * as THREE from 'three';
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js';
 import { MTLLoader } from 'three/examples/jsm/loaders/MTLLoader.js';
+import { PMREMGenerator } from 'three/src/extras/PMREMGenerator.js';
+// Necesario para convertir la textura 2D en un mapa de entorno optimizado (PMREM)
 
 // Eliminamos la importación de OrbitControls, ya no es necesaria.
 
-const ThreeDViewer = ({ modelPath }) => {
+const ThreeDViewer = ({ modelPath, bgImageUrl }) => {
   const mountRef = useRef(null);
   // NEW: Ref para guardar el valor de rotación objetivo basado en el scroll
   const scrollRotationRef = useRef(0);
@@ -42,6 +44,44 @@ const ThreeDViewer = ({ modelPath }) => {
     pointLight.position.set(10, 10, 10);
     scene.add(pointLight);
 
+   /*  // ⭐ CARGA Y CONFIGURACIÓN DEL MAPA DE ENTORNO (IBL)
+    if (bgImageUrl) {
+        pmremGenerator = new PMREMGenerator(renderer);
+        pmremGenerator.compileEquirectangularShader(); // Necesario en algunas versiones
+        
+        const textureLoader = new THREE.TextureLoader();
+        textureLoader.load(
+            bgImageUrl,
+            (texture) => {
+                // 1. Configurar la textura como Equirectangular
+                texture.mapping = THREE.EquirectangularReflectionMapping;
+
+                // 2. Convertir a un Mapa de Entorno Pre-filtrado (IBL)
+                const envMap = pmremGenerator.fromEquirectangular(texture).texture;
+                
+                // Limpieza de la textura original
+                texture.dispose();
+
+                // 3. Asignar el mapa de entorno a la escena (lo usarán los materiales PBR)
+                scene.environment = envMap; 
+
+                // Si el objeto ya cargó, aplicamos el envMap inmediatamente
+                if (object) {
+                    object.traverse((child) => {
+                        if (child instanceof THREE.Mesh && child.material) {
+                            child.material.envMap = envMap;
+                            child.material.needsUpdate = true;
+                        }
+                    });
+                }
+            },
+            undefined,
+            (error) => {
+                console.error('Error al cargar la imagen de fondo para IBL:', error);
+            }
+        );
+    } */
+
     // --- CARGA DE MODELO (MTL + OBJ) ---
     const modelUrl = new URL(modelPath, window.location.origin);
     const modelDir = modelUrl.pathname.substring(0, modelUrl.pathname.lastIndexOf('/') + 1);
@@ -67,6 +107,24 @@ const ThreeDViewer = ({ modelPath }) => {
                 if (child instanceof THREE.Mesh) {
                     child.castShadow = true;
                     child.receiveShadow = true;
+
+                    // ⭐⭐⭐ MODIFICACIONES CLAVE PARA EL VIDRIO ⭐⭐⭐
+                if (child.material) {
+                    // 1. Habilitar la transparencia
+                    child.material.transparent = true;
+
+                    // 2. Usar un modo de mezcla (Blending) adecuado
+                    // THREE.NormalBlending es un buen punto de partida para la mayoría de los casos.
+                    child.material.blending = THREE.NormalBlending; 
+
+                    // 3. (Opcional) Fuerza el orden de renderizado
+                    // Esto ayuda a evitar artefactos de transparencia (los objetos transparentes deben dibujarse después de los opacos).
+                    child.material.depthWrite = false;
+                    child.material.needsUpdate = true;
+                }
+                // ⭐⭐⭐ FIN DE MODIFICACIONES CLAVE ⭐⭐⭐
+
+
                 }
             });
 
