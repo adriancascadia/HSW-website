@@ -53,20 +53,20 @@ const { title } = Astro.props;
                 src={item.image}
                 alt={item.image_alt}
                 loading="lazy"
-                class={`rounded-xl ${item.competitors ? "opacity-40 md:opacity-80 grayscale" : "opacity-100 full-color"} overflow-hidden w-full h-full object-cover object-left absolute inset-0`}
+                class={`rounded-xl ${item.competitors ? "opacity-40 md:opacity-80 grayscale" : "opacity-100 md:opacity-100 full-color"} overflow-hidden w-full h-full object-cover object-left absolute inset-0`}
                 height="1024"
                 width="768"
               />
 
               {/* Gradient mask */}
-              <div class="hidden md:block absolute rounded-xl overflow-hidden w-full h-full object-cover object-left inset-0 bg-gradient-to-r from-bs-surface-1/90 via-bs-surface-3/20 boldtext" />
+              <div class="md:block absolute rounded-xl overflow-hidden w-full h-full object-cover object-left inset-0 bg-gradient-to-r from-bs-surface-1/80 via-bs-surface-3/20 boldtext" />
 
               {/* Content */}
               <figcaption
                 class={`z-10 p-6 sm:p-10 md:p-20 max-w-xl flex flex-col gap-6 h-full text-white`}
               >
                 {/* Title */}
-                <h2 class="bs-h2 text-3xl" set:html={item.title} />
+                <h2 class="bs-h2" set:html={item.title} />
 
                 {/* Intro */}
                 <div
