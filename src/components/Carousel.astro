@@ -9,7 +9,7 @@ const { title } = Astro.props;
   <div
     class="bs-container flex items-center justify-between"
   >
-  { title && <h2 class="bs-h2 text-center md:text-left font-extrabold text-4xl" set:html={ title } />}
+  { title && <h2 class="bs-h2 text-center md:text-left text-[color:var(--accent)]" set:html={ title } />}
 
     <!-- Buttons -->
     <nav class="bs-st-button-wrapper flex justify-center gap-4">
