@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-
+import About from "../components/About.astro";
 import Carousel from "../components/Carousel.astro";
 import HeroSection from "../components/HeroSection.astro";
 import FaqSection from "../components/FaqSection.astro"
@@ -12,7 +12,8 @@ import cases from "../data/cases.json";
 import testimonials from "../data/testimonials.json"
 import faq from "../data/faq.json";
 import CardHSW from "../components/CardHSW.astro"
-
+import Sustainability from "../components/Sustainability.astro";
+import Shop from "../components/Shop.astro";
 ---
 
 <Layout title={ global_settings.title }>
@@ -23,14 +24,16 @@ import CardHSW from "../components/CardHSW.astro"
     title={ home.hero_title }
   />
 
+  <About />
+
+  <Sustainability />
+
+  <Shop />
+
   <Carousel
     cases={ cases }
     title={ home.cases_title }
   />
-
-  <WaterFiltration />
-
-  <CardHSW />
 
   <!-- <ClientsSection
     clients={ clients }
@@ -56,10 +59,6 @@ import CardHSW from "../components/CardHSW.astro"
   />
 
   <NewsletterSection newsletter={newsletter} /> -->
-<TestimonialsSection
-    testimonials={ testimonials }
-    title={ home.testimonials_title }
-  />
 
   <FaqSection
     faq={ faq }

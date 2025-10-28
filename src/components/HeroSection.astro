@@ -1,39 +1,53 @@
 ---
 import ThreeDViewer from "../components/3DViewer";
 import Image from "astro/components/Image.astro"
-import bg_image from "../assets/blog-placeholder-5.jpg"
+import bg_image from "../assets/cover.webp"
 const modelPath = "/models/HSWBottle.obj";
 
 ---
 <section
-    class="relative bg-[url('../assets/blog-placeholder-5.jpg')] bg-center pb-10"
+    class="relative pb-10"
   >
-    <Image src={ bg_image } alt="" format="avif" height={1080} width={1920} class="absolute min-h-svh object-cover inset-0 bottom-auto -z-1 w-full h-auto opacity-30 mask-b-from-50%" loading="eager" />
+    <Image src={ bg_image } alt="" format="webp" height={1080} width={1920} class="absolute min-h-svh object-cover inset-0 bottom-auto -z-1 w-full h-auto" loading="eager" />
 
         
     
     </div>
     <div class="relative z-20 px-8 pt-1 md:px-20 md:pt-5">
-      <h1
+      <div class="bg-gradient-to-r from-bs-surface-0/90 to-transparent rounded p-3">
+        <h1
         class="mt-6 bs-h1 text-[color:var(--light)]"
       >
-        Natural Artesian Water
+        HAWAII’S ONLY WATER <br />
+        BOTTLED AT THE SOURCE
       </h1>
+
+      </div>
+      
       <div
         class="inline-flex items-center gap-2 rounded-full border border-white/40 bg-[color:var(--accent)]/60 px-3 py-1 text-xl font-medium text-white tracking-normal uppercase shadow-sm backdrop-blur"
       >
         <span class="h-1.5 w-1.5 rounded-full bg-white"></span>
-        Never Filtered Tap
+        Not Filtered Tap
       </div>
       <div
         class="mt-1 inline-flex items-center gap-2 rounded-full border border-white/40 bg-[color:var(--aquasky)]/60 px-3 py-1 text-xl font-medium text-white tracking-normal uppercase shadow-sm backdrop-blur"
       >
         <span class="h-1.5 w-1.5 rounded-full bg-white"></span>
-        Never Tankered
+        Not Tankered
+      </div>
+      <!-- Call to actions -->
+      <div class="mt-8 flex flex-wrap items-center gap-3">
+        <a
+          href="#get-started"
+          class="bs-btn inline-flex items-center justify-center rounded-9xl bg-zinc-900 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:opacity-90 active:translate-y-px"
+        >
+          Shop Now
+        </a>
       </div>
       <!-- Eyebrow / badge -->
 
-      <p
+     <!--  <p
         class="mt-3 max-w-1xl text-pretty text-white text-base leading-5 md:leading-7 md:text-2xl"
       >
         Hawaiian rain is naturally filtered through 13,000 feet of pristine
@@ -41,29 +55,13 @@ const modelPath = "/models/HSWBottle.obj";
         a clean, smooth taste and a perfect natural pH. <strong
           >Experience the authentic purity of Hawaii.</strong
         >
-      </p>
+      </p> -->
       <div class="">
         <ThreeDViewer 
           modelPath={modelPath} 
           bgImageUrl={bg_image}
           client:visible 
         />
-      </div>
-
-      <!-- Call to actions -->
-      <div class="mt-8 flex flex-wrap items-center gap-3 justify-center">
-        <a
-          href="#get-started"
-          class="inline-flex items-center justify-center rounded-xl bg-zinc-900 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:opacity-90 active:translate-y-px dark:bg-white dark:text-zinc-900"
-        >
-          Buy Now
-        </a>
-        <a
-          href="#contact"
-          class="inline-flex items-center justify-center rounded-xl border border-zinc-300/70 bg-white/70 px-5 py-3 text-sm font-semibold text-zinc-700 shadow-sm backdrop-blur transition hover:bg-white active:translate-y-px dark:border-white/20 dark:bg-white/10 dark:text-zinc-200"
-        >
-          Know More
-        </a>
       </div>
 
       <!-- Decorative divider -->

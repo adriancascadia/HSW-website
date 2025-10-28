@@ -6,32 +6,31 @@ const { settings } = Astro.props
 
 ---
 
-<header class="wrapper bg-loop font-semibold">
+<header class="wrapper font-semibold">
 
   <!-- Wrapper -->
   <div class="bs-container flex justify-between items-center">
 
     <!-- Logo -->
-    <a class="flex xl:min-w-32 group mx-10 md:mx-20" href="/" aria-label={ settings.title + ' - Home' }>
+    <a class="flex group" href="/" aria-label={ settings.title + ' - Home' }>
 
-      <Logo class="group-hover:scale-180 transition-transform ease-bs-spring duration-1000" height="150" width="150" />
+      <Logo class="text-[color:var(--accent)] hover:text-[color:var(--aquasky)] transition-transform ease-bs-spring duration-1000" height="100" width="100" />
 
     </a>
     <Menu/>
 
   </div>
     <!-- Nav -->
-    <nav class="nav-links hidden col-span-6 md:flex mx-auto self-stretch lg:gap-2">
+    <nav class="nav-links hidden col-span-6 md:flex">
 
       <!-- Links -->
       { settings.nav.map( item =>
 
-        <a class="bs-btn !bg-transparent before:translate-y-full hover:before:translate-y-0" href={item.link}>
+        <a class="text-[color:var(--accent)] !bg-transparent before:translate-y-full hover:before:translate-y-0" href={item.link}>
           { item.title }
         </a>
 
       )}
-      <Social />
 
     </nav>
 

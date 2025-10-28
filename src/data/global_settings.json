@@ -11,20 +11,24 @@
   "theme_color": "#18181b",
   "nav": [
     {
-      "title": "Why HSW",
-      "link": "/#cases"
+      "title": "Our Water",
+      "link": "/#our-water"
     },
     {
-      "title": "Our Source",
-      "link": "/#our-source"
+      "title": "Origin",
+      "link": "/#origin"
     },
     {
-      "title": "Community",
-      "link": "/#community"
+      "title": "Sustainability",
+      "link": "/#sustainability"
     },
     {
-      "title": "FAQ's",
-      "link": "/#faq"
+      "title": "Shop",
+      "link": "/#shop"
+    },
+    {
+      "title": "Contact",
+      "link": "/#contact"
     }
   ],
 

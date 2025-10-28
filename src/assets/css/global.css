@@ -5,8 +5,8 @@
   --font-display: var(--font-league-spartan), "League Spartan";
   --font-body: var(--font-gidole), "ui-sans-serif", "system-ui", "sans-serif";
 
-  --color-bs-surface-0: #eff8fa;
-  --color-bs-surface-1: #272727;
+  --color-bs-surface-0: #272727;
+  --color-bs-surface-1: #eff8fa;
   --color-bs-surface-2: #00a0b0;
   --color-bs-surface-3: #f8991d;
 
@@ -60,17 +60,6 @@
 	font-style: normal;
 	font-display: swap;
 }
-
-/* 
-header {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: space-between;
-  background-color: var(--light);
-	margin: 0;
-	padding: 0 1em;
-} */
 
 h2 a,
 h2 a.active {
@@ -172,7 +161,7 @@ nav a.active {
 		flex-wrap: nowrap;
 		align-items: center;
 		justify-content: space-between;
-		padding: .5em 2em;
+		padding: .01em 2em;
 		width: 100%;
 	}
 
