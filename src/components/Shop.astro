@@ -6,13 +6,13 @@ import Bottle1L from "../assets/1-L.png";
 import Bottle15 from "../assets/1.5-L.png";
 ---
 
-<section class="bg-white flex flex-col justify-center items-center py-20 px-10">
+<section class=" flex flex-col justify-center items-center py-20 px-10">
     
     <h2 class="bs-h2 text-[color:var(--accent)] mb-10 text-center">
         Shop Hawaiian Springs
     </h2>
     
-    <div class="flex justify-between text-center p-10 gap-6 max-w-6xl mx-auto">
+    <div class="grid gird-cols-2 md:grid-cols-4 gap-8 w-full max-w-6xl">
         
         <div class="flex flex-col justify-end 
                     rounded-3xl bg-[color:var(--powderblue)] 
@@ -66,9 +66,9 @@ import Bottle15 from "../assets/1.5-L.png";
                 <Image
                     src={Bottle15}
                     alt="1.5L Bottle"
-                    class="w-32 h-auto mb-4"
+                    class="w-23 h-auto mb-4"
                 />
-                <h2 class="text-xl font-bold">1.5L</h2>
+                <h2 class="text-[color:var--accent)] text-xl font-bold">1.5L</h2>
                 <button
                     class="bs-btn bg-[color:var(--accent)] text-white px-4 py-2 rounded-full mt-4"
                 >Buy Now</button>

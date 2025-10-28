@@ -195,8 +195,7 @@ const ThreeDViewer = ({ modelPath, bgImageUrl }) => {
     };
   }, [modelPath]); // Las dependencias de mousePosition ya no son necesarias
 
-  // Aplica estilos de Tailwind para el tamaño del contenedor
-  return <div ref={mountRef} className="w-full h-96" />;
+  return <div ref={mountRef} className="relative w-full h-130 md:h-160" />;
 };
 
 export default ThreeDViewer;

@@ -10,17 +10,15 @@ import HawaiianVolcano from "../assets/theme-images/HawaiianVolcano.svg";
 import WaterSource from "../assets/theme-images/WaterSource.svg";
 ---
 
-<section class="relative pb-60">
+<section class="">
+  <div class="w-full min-h-screen relative">
   <Image
     src={bg_image}
     alt=""
     format="webp"
-    height={1080}
-    width={1920}
-    class="absolute -z-1 w-full h-auto"
+    class="absolute object-cover bottom-auto -z-1 w-full h-full"
     loading="eager"
   />
-
   <div class="px-8 pt-1 md:px-20 md:pt-5">
     <div class="">
       <h1 class="mt-6 bs-h1 text-[color:var(--light)]">Sustainability</h1>
@@ -40,20 +38,24 @@ import WaterSource from "../assets/theme-images/WaterSource.svg";
     <HawaiianVolcano class="h-50 w-50"/>
     <WaterSource class="h-50 w-50"/>
   </div>
-</section>
-<div class="relative w-full h-auto">
-  <div class="relative flex items-center bg-[color:var(--accent)] w-full h-20">
-    <p class="ml-auto pr-20 text-2xl font-bold text-white">
-      Not Filtered Tap. Not Tankered.
-    </p>
-  </div>
+ 
 
   <Image
     src={bottleImage}
     alt="Sustainability Bottle"
-    class="absolute left-10 bottom-0 h-80 w-auto object-contain z-10"
+    class="absolute px-5 bottom-0 h-80 w-auto object-contain z-1"
     width={200}
     height={300}
     loading="eager"
   />
-</div>
+   <div class="absolute bottom-0 flex items-center bg-[color:var(--accent)] w-full h-20">
+    <p class="ml-auto pr-20 text-2xl font-bold text-white">
+      Not Filtered Tap. Not Tankered.
+    </p>
+  </div>
+  </div>
+  
+
+  
+</section>
+  

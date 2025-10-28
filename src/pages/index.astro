@@ -14,6 +14,7 @@ import faq from "../data/faq.json";
 import CardHSW from "../components/CardHSW.astro"
 import Sustainability from "../components/Sustainability.astro";
 import Shop from "../components/Shop.astro";
+import Closing from "../components/Closing.astro";
 ---
 
 <Layout title={ global_settings.title }>
@@ -64,5 +65,6 @@ import Shop from "../components/Shop.astro";
     faq={ faq }
     title={ home.faq_title }
   />
+  <Closing />
 </Layout>
 
