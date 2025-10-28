@@ -115,11 +115,7 @@ nav {
   margin: 0;
 }
 
-.social-links {
-  width: 100%;
-  display: none;
-  margin: 0;
-}
+
 
 .nav-links a {
 	display: block;
@@ -143,11 +139,6 @@ nav a.active {
 
 :has(.menu[aria-expanded="true"]) .nav-links {
 	display: unset;
-}
-
-:has(.menu[aria-expanded="true"]) .social-links {
-	display: flex;
-	width: 100%;
 }
 
 :has(.menu[aria-expanded="true"]) header {
@@ -206,15 +197,7 @@ nav a.active {
 	}
 }
 
-footer {
-		display: block;
-		padding: 2em 1em 6em 1em;
-		background: linear-gradient(var(--light)) no-repeat;
-		color: rgb(var(--gray));
-		text-align: center;
-		justify-content: center;
-		align-items: center;
-	}
+
 	.social {
 		display: flex;
 		justify-content: center;

@@ -20,37 +20,39 @@ const modelPath = "/models/HSWBottle.obj";
                 flex flex-col gap-4
                 bg-[color:var(--bs-surface-0)/60]
                 rounded-xl
-                p-8
+                px-3
+                pt-3
+                md:p-8
                 shadow-lg
                 md:w-1/2"
     >
       <div
-        class="flex items-center bg-gradient-to-r from-bs-surface-0/90 to-transparent rounded p-3"
+        class="flex items-center bg-gradient-to-r from-bs-surface-0/90 to-transparent rounded p-3 -ml-9"
       >
-        <h1 class="bs-h1 text-[color:var(--light)]">
+        <h1 class="bs-h1 text-[color:var(--light)] pl-9">
           HAWAII’S ONLY WATER <br />
           BOTTLED AT THE SOURCE
         </h1>
       </div>
-      <div class="flex gap-4">
+      <div class="flex gap-4 -my-1 md:pl-2">
         <div
-          class="inline-flex items-center gap-2 rounded-xl md:rounded-full border border-white/40 bg-[color:var(--accent)]/60 px-3 py-1 text-xl font-medium text-white tracking-normal uppercase shadow-sm backdrop-blur"
+          class="inline-flex items-center gap-2 rounded-xl md:rounded-full border border-white/40 bg-[color:var(--accent)]/60 px-3 py-1 text-white tracking-normal uppercase shadow-sm backdrop-blur bs-h4"
         >
-          <span class="bs-h3"></span>
+          <span class="h-1.5 w-1.5 rounded-full bg-white"></span>
           Not Filtered Tap
         </div>
         <div
-          class="mt-1 inline-flex items-center gap-2 rounded-xl md:rounded-full border border-white/40 bg-[color:var(--aquasky)]/60 px-3 py-1 text-xl font-medium text-white tracking-normal uppercase shadow-sm backdrop-blur"
+          class="inline-flex items-center gap-2 rounded-xl md:rounded-full border border-white/40 bg-[color:var(--accent)]/60 px-3 py-1 text-white tracking-normal uppercase shadow-sm backdrop-blur bs-h4"
         >
-          <span class="bs-h3"></span>
+          <span class="h-1.5 w-1.5 rounded-full bg-white"></span>
           Not Tankered
         </div>
       </div>
       <!-- Call to actions -->
-      <div class="mt-8 flex flex-wrap items-center gap-3">
+      <div class="pl-2 md:mt-1 flex flex-wrap items-center gap-3">
         <a
           href="#get-started"
-          class="bs-btn"
+          class="bs-btn bs-h3"
         >
           Shop Now
         </a>

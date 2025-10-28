@@ -3,9 +3,14 @@ import Social from "./Social.astro"
 const today = new Date();
 ---
 
-<footer>
+<footer class="flex flex-col gap-1 items-center md:items-center md:flex-row justify-between p-4 text-[color:var(--accent)]">
+	<div class="bs-h4">
 	&copy; {today.getFullYear()} Hawaiian Springs. All rights reserved.
-	<div class="social">
+	</div>
+	<div class="bs-h4">
+    |  @hawaiianspringswater
+	</div>
+	<div class="p-1 md:p-0 social">
 		<Social/>
 	</div>
 </footer>
