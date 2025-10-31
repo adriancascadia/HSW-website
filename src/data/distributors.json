@@ -1,25 +1,25 @@
 [
   {
     "title": "PoS Material",
-    "content": "Heavenly rainfall is naturally filtered through <strong>13,000 feet of pristine volcanic lava rock</strong>. This natural purification process infuses the water with <strong>unique electrolytes and minerals</strong>, including a high content of silica.",
+    "content": "<strong>Boost sales</strong> with ready-to-use Point-of-Sale (PoS) displays, shelf talkers, and artwork. Download high-impact visuals that highlight our unique volcanic filtration and premium Hawaiian source.",
     "cta": "Get",
-    "image": "/content-images/source.jpg",
+    "image": "/content-images/pixelate.pictures.avif",
     "image_alt": "",
     "bg": "bg-gradient-to-r from-bs-surface-2 to-bs-surface-1"
   },
   {
     "title": "Style Assets",
-    "content": "Enjoy optimal hydration with a <strong>naturally alkaline pH of 7.7. This composition, with its blend of minerals like silica, calcium, and magnesium, delivers a <strong>clean, soft, and slightly sweet taste</strong>.",
+    "content": "Access the core of our brand. Find the official Hawaiian Springs logos (PNG, vector), approved bottle photography, brand guidelines, and high-resolution imagery for all your marketing needs.",
     "cta": "Get",
-    "image": "/content-images/natural.jpg",
+    "image": "/content-images/pixelate.pictures.avif",
     "image_alt": "",
     "bg": "bg-gradient-to-r from-bs-surface-3 to-bs-surface-1"
   },
   {
     "title": "Other Tools",
-    "content": "Hawaiian Springs is <strong>Natural Artesian Water</strong>, not purified or filtered tap water. It is drawn from a deep aquifer in <strong>Mauna Loa</strong>, ensuring a purity and taste that is <strong>untouched by human hands</strong> until you open the bottle.",
+    "content": "Everything else you need for success. Explore training guides, product specification sheets, water analysis reports (pH and mineral content), and important sales presentations.",
     "cta": "Know More",
-    "image": "/content-images/filteredtap.jpg",
+    "image": "/content-images/pixelate.pictures.avif",
     "image_alt": "",
     "bg": "bg-gradient-to-r from-bs-surface-2 to-bs-surface-1"
   }
