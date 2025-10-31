@@ -11,10 +11,6 @@
   "theme_color": "#18181b",
   "nav": [
     {
-      "title": "Our Water",
-      "link": "/#our-water"
-    },
-    {
       "title": "Origin",
       "link": "/#origin"
     },
@@ -25,6 +21,10 @@
     {
       "title": "Shop",
       "link": "/#shop"
+    },
+    {
+      "title": "Our Water",
+      "link": "/#our-water"
     },
     {
       "title": "Contact",

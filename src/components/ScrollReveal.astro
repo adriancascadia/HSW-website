@@ -1,0 +1,51 @@
+---
+// Props para configurar la animación
+interface Props {
+  // Retraso en milisegundos para la aparición secuencial
+  delay?: string; 
+}
+
+const { delay = "0" } = Astro.props; 
+
+// Generar un ID único para el elemento
+const id = `scroll-reveal-${crypto.randomUUID()}`;
+---
+
+<div 
+  id={id}
+  class="opacity-0 translate-y-4 transition-all duration-1000 ease-out"
+>
+  <slot />
+</div>
+
+<script define:vars={{ id, delay }}>
+  const element = document.getElementById(id);
+
+  if (element) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          // Si el elemento es visible
+          if (entry.isIntersecting) {
+            // Usa setTimeout para introducir el delay
+            setTimeout(() => {
+              // Eliminar clases de invisibilidad/estado inicial y añadir las de estado final
+              element.classList.remove('opacity-0', 'translate-y-4');
+              element.classList.add('opacity-100', 'translate-y-0');
+            }, delay);
+            
+            // Opcional: deja de observar una vez que ha aparecido
+            observer.unobserve(element); 
+          }
+        });
+      },
+      // Opciones para Intersection Observer
+      {
+        rootMargin: '0px',
+        threshold: 0.2 // Se dispara cuando el 20% del elemento es visible
+      }
+    );
+
+    observer.observe(element);
+  }
+</script>
