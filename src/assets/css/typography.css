@@ -2,7 +2,7 @@
 @reference "./global.css";
 
 .bs-h1 {
-  @apply font-display font-extrabold text-balance text-3xl md:text-4xl leading-[1];
+  @apply font-display font-extrabold text-balance text-2xl sm:text-3xl md:text-3xl lg:text-4xl leading-[1];
 }
 
 .bs-h2 {
@@ -10,11 +10,11 @@
 }
 
 .bs-h3 {
-  @apply font-display font-extrabold text-balance text-lg md:text-xl;
+  @apply font-display font-bold text-balance text-lg md:text-xl;
 }
 
 .bs-h4 {
-  @apply font-display font-bold text-balance text-lg md:text-xl;
+  @apply font-display font-bold text-balance text-sm md:text-sm lg:text-xl;
 }
 
 .bs-icons {

@@ -1,50 +1,46 @@
 ---
-import Social from "./Social.astro"
-import Logo from '../assets/theme-images/logo.svg'
-import Menu from "./BurgerMenu.astro"
-const { settings } = Astro.props
-
+import Social from "./Social.astro";
+import Logo from "../assets/theme-images/logo.svg";
+import Menu from "./BurgerMenu.astro";
+const { settings } = Astro.props;
 ---
 
-<header class="wrapper font-semibold">
-
+<header class="px-5 md:px-10 md:flex justify-between wrapper font-semibold w-full">
   <!-- Wrapper -->
-  <div class="bs-container flex justify-between items-center">
-
+  <div class="flex justify-between items-center">
     <!-- Logo -->
-    <a class="flex group" href="/" aria-label={ settings.title + ' - Home' }>
-
-      <Logo class="text-[color:var(--accent)] hover:text-[color:var(--aquasky)] transition-transform ease-bs-spring duration-1000" height="100" width="100" />
-
+    <a class="flex group" href="/" aria-label={settings.title + " - Home"}>
+      <Logo
+        class="text-[color:var(--accent)] hover:text-[color:var(--aquasky)] transition-transform ease-bs-spring duration-1000"
+        height="100"
+        width="150"
+      />
     </a>
-    <Menu/>
-
+    <Menu />
   </div>
-    <!-- Nav -->
-    <nav class="nav-links hidden col-span-6 md:flex">
-
-      <!-- Links -->
-      { settings.nav.map( item =>
-
-        <a class="text-[color:var(--accent)] !bg-transparent before:translate-y-full hover:before:translate-y-0" href={item.link}>
-          { item.title }
+  <!-- Nav -->
+  <nav class="w-auto nav-links hidden col-span-6 md:flex md:justify-between items-center">
+    <!-- Links -->
+    {
+      settings.nav.map((item) => (
+        <a
+          class="block p-2 md:p-5 bs-h3 text-center w-auto text-[color:var(--accent)] !bg-transparent before:translate-y-full hover:before:translate-y-0"
+          href={item.link}
+        >
+          {item.title}
         </a>
+      ))
+    }
+  </nav>
 
-      )}
-
-    </nav>
-
-    <!-- CTA -->
-   <!-- <button type="button" class="min-w-32 bs-btn" onclick="demo.showModal()">
+  <!-- CTA -->
+  <!-- <button type="button" class="min-w-32 bs-btn" onclick="demo.showModal()">
 
       { settings.demo.title }
 
     </button>  -->
-
- 
-
 </header>
 
 <script>
-      import "../scripts/menu.js";
-    </script>
+  import "../scripts/menu.js";
+</script>

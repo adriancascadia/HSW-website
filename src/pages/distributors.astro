@@ -1,0 +1,27 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import home from "../data/home.json"
+import caseStudies from "../data/distributors.json"
+import CaseStudiesSection from "../components/CaseStudiesSection.astro";
+import bg_image from "../assets/Closing.webp";
+---
+
+<Layout>
+  <section class="flex flex-col items-center justify-center">
+    <div class="relative w-full min-h-screen ">
+      <Image
+    src={bg_image}
+    alt=""
+    format="webp"
+    class="absolute object-cover top-0 -z-1 w-full h-full"
+    loading="eager"
+  />
+  <div class="absolute inset-0 bg-gradient-to-t from-bs-surface-0 to-transparent"></div>
+      <CaseStudiesSection
+    caseStudies={ caseStudies }
+    title={ home.distributors_title }
+  />
+      </div>
+      </section>
+</Layout>
