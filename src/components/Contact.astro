@@ -2,34 +2,35 @@
 import Image from "astro/components/Image.astro";
 import bg_image from "../assets/Closing.webp";
 import Form from "./Form.astro";
-import newsletter from "../data/form.json"
+import newsletter from "../data/form.json";
 ---
 
-<section id="contact">
-  <div class="w-full min-h-screen relative">
-  <Image
-    src={bg_image}
-    alt=""
-    format="webp"
-    class="absolute object-cover bottom-auto -z-2 w-full h-full"
-    loading="eager"
-  />
-  <Form class="absolute top-[10%] z-1" newsletter={newsletter}/>
-  <div class="absolute inset-0 bg-gradient-to-t from-bs-surface-0 to-transparent -z-1"></div>
-  <div class="absolute bottom-0 px-8 pb-6 md:px-20 md:pt-5">
-    <div class="">
-      <h1 class="mt-6 bs-h1 uppercase text-[color:var(--light)]">Integrity to Hawaii<br/>
-Bottled where it rises</h1>
-      <p
-        class="mt-3 max-w-md text-pretty text-white text-base leading-5 md:leading-7 md:text-2xl"
-      >
-       Protecting the land by staying true to our source
-      </p>
+  <section id="contact" class="w-full min-h-screen relative">
+    <Image
+      src={bg_image}
+      alt=""
+      format="webp"
+      class="absolute object-cover bottom-auto -z-2 w-full h-full"
+      loading="eager"
+    />
+    
+    <Form newsletter={newsletter} />
+    
+    <div
+      class="absolute inset-0 bg-gradient-to-t from-bs-surface-0 to-transparent -z-1"
+    >
     </div>
-  </div>
-  </div>
-  
-
-  
-</section>
-  
+    <div class="absolute bottom-0 px-8 pb-6 md:px-20 md:pt-5">
+      <div class="">
+        <h1 class="mt-6 bs-h1 uppercase text-[color:var(--light)]">
+          Integrity to Hawaii<br />
+          Bottled where it rises
+        </h1>
+        <p
+          class="mt-3 max-w-md text-pretty text-white text-base leading-5 md:leading-7 md:text-2xl"
+        >
+          Protecting the land by staying true to our source
+        </p>
+      </div>
+    </div>
+  </section>

@@ -5,10 +5,10 @@ const { newsletter } = Astro.props
 <aside class="@container bs-container bs-mt-lg text-center" id="newsletter">
 
   <!-- Wrapper -->
-  <div class="p-6 md:py-16 relative rounded-xl overflow-hidden flex justify-center isolate w-full h-full">
+  <div class="p-3 pt-7 relative rounded-xl overflow-hidden flex justify-center isolate w-full h-full">
 
     <!-- Content -->
-    <div class="z-10 p-6 md:p-10 lg:p-20 rounded-xl md:max-w-lg flex flex-col gap-6 bg-bs-surface-0/80 h-full">
+    <div class="z-10 p-6 md:p-7 lg:p-10 rounded-xl md:max-w-lg flex flex-col gap-6 bg-bs-surface-0/80 h-full">
 
       <!-- Title -->
       <h2 class="bs-h2" set:html={ newsletter.title } />
@@ -31,6 +31,12 @@ const { newsletter } = Astro.props
           type="email"
           class="border-2 rounded-lg text-center bg-bs-surface-0 border-bs-surface-3 form-input px-4 py-3"
           placeholder="Your email">
+
+        <label class="sr-only" for="nl-email">Message</label>
+        <textarea
+          id="nl-msg"
+          class="border-2 rounded-lg text-center flex items-start bg-bs-surface-0 border-bs-surface-3 form-input h-32 px-4 py-3"
+          placeholder="Your Message"></textarea>
 
         <input type="submit" value={ newsletter.cta } class="bs-btn form-input px-4 py-3">
 

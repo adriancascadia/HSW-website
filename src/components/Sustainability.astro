@@ -10,7 +10,10 @@ import Mountains from "../assets/theme-images/Mountains.svg";
 import Volcano from "../assets/theme-images/Volcano.svg";
 import HawaiianVolcano from "../assets/theme-images/HawaiianVolcano.svg";
 import WaterSource from "../assets/theme-images/WaterSource.svg";
-
+import Arrow1 from "../assets/arrow1.svg"
+import Arrow2 from "../assets/arrow2.svg"
+import Arrow3 from "../assets/arrow3.svg"
+import Arrow4 from "../assets/arrow4.svg"
 // Componente para manejar la animación de aparición
 import ScrollReveal from "./ScrollReveal.astro";
 
@@ -40,27 +43,32 @@ import ScrollReveal from "./ScrollReveal.astro";
         <PacificOcean class="size-44 text-white" />
       </ScrollReveal>
     </div>
-    <div class="absolute top-0 right-[10%] md:top-[17%] md:right-[60%]">
+    <div class="flex absolute top-8 right-[10%] md:top-[15%] md:right-[45%] lg:right-[60%]">
       <ScrollReveal delay="500">
+        <Arrow1 class="absolute w-[50%] right-[90%]"/>
         <TropicalRain class="size-32 text-white" />
       </ScrollReveal>
     </div>
-    <div class="absolute top-[27%] left-[10%] md:top-[10%] md:left-[45%]">
+    <div class="absolute top-[28%] left-[10%] md:top-[17%] md:left-[65%] lg:top-[10%] lg:left-[45%]">
       <ScrollReveal delay="1000">
-        <Mountains class="size-44 text-white" />
+        <Arrow2 class="absolute w-[30%] -top-4 -right-7 rotate-140 md:rotate-0 md:w-[50%] md:right-[90%]"/>
+        <Mountains class="size-40 text-white" />
       </ScrollReveal>
     </div>
-    <div class="absolute top-[30%] right-0 md:top-[10%] md:right-[15%]">
+    <div class="absolute top-[25%] right-0 md:top-[32%] md:right-[35%] lg:top-[10%] lg:right-[15%]">
     <ScrollReveal delay="1500">
+      <Arrow3 class="absolute w-[30%] top-10 right-30 md:rotate-110 md:-right-15 md:top-14 lg:right-50 lg:top-14 lg:rotate-0"/>
       <Volcano class="size-60 md:size-80 text-white" />
     </ScrollReveal>
   </div>
-  <div class="absolute bottom-[30%] right-[20%]">
+  <div class="absolute bottom-[32%] right-[10%]">
     <ScrollReveal delay="2000">
-      <HawaiianVolcano class="w-60 h-24 text-white" />
+            <Arrow4 class="absolute w-[20%] -top-5 -right-10 rotate-0 md:-top-20 md:right-10 md:-rotate-45 lg:-top-20 lg:right-10 lg:-rotate-0"/>
+
+      <HawaiianVolcano class="w-56 h-24 text-white" />
     </ScrollReveal>
   </div>
-  <div class="absolute bottom-[5%] left-[30%] md:left[1%]">
+  <div class="absolute bottom-[5%] left-[30%] lg:left[1%]">
     <ScrollReveal delay="2500">
       <WaterSource class="size-64 md:size-100 inset-y-0 text-white" />
     </ScrollReveal>
@@ -70,7 +78,7 @@ import ScrollReveal from "./ScrollReveal.astro";
     <Image
       src={bottleImage}
       alt="Sustainability Bottle"
-      class="absolute bottom-0 left-[3%] md:left-[20%] h-80 w-auto object-contain"
+      class="absolute bottom-0 left-[3%] md:left-[10%] lg:left-[20%] h-80 w-auto object-contain"
       width={150}
       height={250}
       loading="eager"
