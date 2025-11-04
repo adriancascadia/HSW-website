@@ -3,7 +3,8 @@
 @theme {
 
   --font-display: var(--font-league-spartan), "League Spartan";
-  --font-body: var(--font-gidole), "ui-sans-serif", "system-ui", "sans-serif";
+  --font-body: var(--font-gidole), "Gidole";
+  --font-especial: var(--font-especial), "Poppins";
 
   --color-bs-surface-0: #272727;
   --color-bs-surface-1: #eff8fa;
@@ -39,7 +40,7 @@
 
 @font-face {
 	font-family: "League Spartan";
-	src: url("/fonts/LeagueSpartan.ttf") format("ttf");
+	src: url("/assets/fonts/LeagueSpartan.ttf") format("ttf");
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
@@ -47,7 +48,7 @@
 
 @font-face {
 	font-family: "Gidole";
-	src: url("/fonts/Gidole-Regular.ttf") format("ttf");
+	src: url("/assets/fonts/Gidole-Regular.ttf") format("ttf");
 	font-weight: 700;
 	font-style: normal;
 	font-display: swap;
@@ -55,48 +56,10 @@
 
 @font-face {
 	font-family: "Poppins";
-	src: url("/fonts/Poppins-Regular.ttf") format("ttf");
+	src: url("/assets/fonts/Poppins-Regular.ttf") format("ttf");
 	font-weight: 700;
 	font-style: normal;
 	font-display: swap;
-}
-
-.social-links {
-	gap: 0.3em;
-}
-
-.social-links,
-.social-links a {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 0;
-	margin: 0;
-}
-
-.menu {
-	padding: 5px 10px;
-	cursor: pointer;
-
-}
-
-.menu .line {
-	display: block;
-	width: 40px;
-	height: 5px;
-	margin-bottom: 10px;
-	background-color: var(--accent);
-}
-
-nav a.active {
-	text-decoration: none;
-	border-bottom-color: var(--accent);
-}
-
-
-.nav-links a:hover,
-.nav-links a:focus {
-	background-color: var(--aquasky);
 }
 
 :has(.menu[aria-expanded="true"]) .nav-links {
@@ -105,38 +68,4 @@ nav a.active {
 
 :has(.menu[aria-expanded="true"]) header {
 	padding-bottom: 1em;
-}
-
-@media screen and (min-width: 992px) {
-
-	nav {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	
-	}
-
-	.nav-links {
-		display: flex;
-		background: none;
-		justify-content: center;
-		align-items: center;
-		align-self: center;
-		width: 100%;
-		
-	}
-
-	.menu {
-		display: none;
-	}
-
-	.social-links {
-		display: flex;
-		max-width: fit-content;
-	}
-
-	.social-links a {
-		padding: 0 .1em;
-		margin: 0;
-	}
 }

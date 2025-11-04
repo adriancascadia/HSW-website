@@ -27,12 +27,11 @@ import Contact from "../components/Contact.astro";
 
   <About />
 
-  <Sustainability client:visible/>
+  <Sustainability />
 
   <Shop />
 
   <Carousel
-    client:visible
     cases={ cases }
     title={ home.cases_title }
   />

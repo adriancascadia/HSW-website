@@ -5,10 +5,10 @@ const prev_btn = document.querySelector(".js-fc-btn-prev");
 const next_btn = document.querySelector(".js-fc-btn-next");
 
 const swiper = new Swiper(".js-fc-swiper", {
-  slidesPerView: 1.05,
+  slidesPerView: 1.1,
   spaceBetween: 8,
   speed: 500,
-  loop: true,
+  loop: false,
   centeredSlides: true,
   breakpoints: {
     640: {
