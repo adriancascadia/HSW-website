@@ -7,13 +7,13 @@ const { question, answer } = Astro.props
 ---
 
 <details name="faq"
-class="group bg-bs-surface-2 hover:bg-bs-surface-3 open:bg-bs-surface-3 transition-colors w-full shadow-md rounded-lg bs-h3 ">
+class="group bg-bs-surface-2 hover:bg-bs-surface-3 open:bg-bs-surface-3 transition-colors w-full shadow-md rounded-lg">
 
   <!-- Summary -->
   <summary class="flex gap-3 justify-between items-center p-6 py-5">
 
     <!-- Title -->
-    <span class="select-none bs-h3 text-white" set:html={ question } />
+    <span class="select-none bs-h4 text-white" set:html={ question } />
 
     <!-- Icon -->
     <span>
@@ -22,7 +22,7 @@ class="group bg-bs-surface-2 hover:bg-bs-surface-3 open:bg-bs-surface-3 transiti
   </summary>
 
   <!-- Content -->
-  <div class="anim-wrapper max-w-none">
+  <div class="bs-body-text anim-wrapper max-w-none">
 
     <div set:html={ answer } class="p-6" />
 
