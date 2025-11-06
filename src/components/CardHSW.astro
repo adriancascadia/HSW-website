@@ -1,44 +1,49 @@
 ---
-import photo from "../assets/community.png";
+import { getCollection, render } from "astro:content";
+import { Image } from "astro:assets";
+const { title } = Astro.props;
+const allCases = await getCollection('cases');
+const cases = await Promise.all(
+  allCases.map(async (item) => {
+    // 3. Llamar a render() en CADA item individual
+    const { Content } = await render(item);
+    return {
+      // Mantenemos el Front Matter (metadata)
+      data: item.data, 
+      // Agregamos el componente de contenido renderizado
+      Content: Content 
+    };
+  })
+);
 ---
 
 <section id="community" class="text-white">
         <div class="mx-auto max-w-5xl px-4 py-8 md:py-10">
-
-          <!-- Contenedor para imagen superpuesta -->
-          <div class="relative">
-            
-            
-          <!-- Banda azul detrás para dar sensación de superposición -->
+        
+        { cases.map((item) => (
+          
           <div class="group relative h-40 w-[88%] -ml-2 md:-ml-6 rounded-2xl bg-[color:var(--accent)]/95 overflow-hidden">
-            <!-- Brillo (se desliza al hover) -->
-        <span class="pointer-events-none absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-[120%] transition-transform duration-[1600ms] ease-out group-hover:translate-x-[120%]"></span>
-            <div class="p-10">
-            <h2 class="bs-h2">Our Community</h2>
-            </div>
-          </div>
+<div class="p-10">
+            <h2 class="bs-h2">{item.data.title}</h2>
+            </div>        <span class="pointer-events-none absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-[120%] transition-transform duration-[1600ms] ease-out group-hover:translate-x-[120%]"></span>
+         </div>
+         
 
-          <!-- Imagen (superpuesta sobre la banda) -->
           <figure
             class="relative z-10 -mt-10 shadow-xl overflow-hidden border border-black/5 rounded-3xl"
           >
-            <img
-              src={photo.src}
-              alt="HSW bottles"
+            <Image
+              src={item.data.image}
+              alt={item.data.image_alt}
               class="block w-full h-[360px] md:h-[420px] object-cover transition-transform duration-500 ease-[cubic-bezier(.2,.8,.2,1)] hover:scale-[1.05] will-change-transform"
               loading="eager"
             />
 
-            <!-- “resaltador” brillante como en la maqueta (opcional)
-        <div
-          class="absolute right-[14%] top-[18%] h-40 w-36 rounded-2xl ring-4 ring-white/80 shadow-2xl
-                     backdrop-blur-[1px] bg-white/10"></div> -->
           </figure>
-        </div>
 
-        <!-- Texto simulado abajo -->
-        <div class="mt-8 bs-body-text">
-          <p>Immerse yourself in the vibrant spirit of Hawaii's local communities. Discover the warmth of 'ohana (family), the richness of ancient traditions, and the joy of shared stories. From lively luaus to serene ceremonies, witness the genuine aloha that binds these islanders. Explore their unique way of life, deeply connected to the land and sea, and feel the true heart of paradise.
-          </p>
+        <div class="mt-8 bs-body-text text-bs-surface-0">
+          <item.Content/>
+          
         </div>
+        ))}
       </section>

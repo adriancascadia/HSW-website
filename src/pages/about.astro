@@ -1,0 +1,90 @@
+---
+import Layout from "../layouts/Layout.astro";
+import HSWicons from "../components/HSWicons.astro";
+import { Image } from "astro:assets";
+import aboutImage from "../assets/about.webp";
+import source from "../assets/source.jpg";
+---
+
+<Layout>
+  <section
+    id="origin"
+    class="mx-auto max-w-7xl py-12 md:py-24 px-4 sm:px-6 lg:px-8"
+  >
+    <div class="text-center mb-12 md:mb-16">
+      <h1 class="bs-h1 text-bs-surface-0 mb-2">Know Our Source</h1>
+      <h2 class="bs-h4 text-bs-surface-2 max-w-2xl mx-auto">
+        Where the Journey Ends and the Source Begins
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center mb-16 md:mb-24">
+      <div class="order-2 md:order-1 space-y-4">
+        <p class="text-xl md:text-2xl leading-relaxed text-gray-700">
+          The water in every bottle of Hawaiian Springs begins high on the
+          volcanic slopes of Mauna Loa, nearly 13,000 feet above sea level. From
+          there, rainfall begins a long, quiet descent through ancient layers of
+          lava — a natural filtration path shaped by time and pressure.
+        </p>
+      </div>
+      <div class="order-1 md:order-2">
+        <Image
+          src={source}
+          alt="Rainfall on Mauna Loa, the volcanic source of the water"
+          class="rounded-2xl shadow-2xl transition-transform duration-500 hover:scale-[1.02]"
+          width={700}
+          height={700}
+          loading="eager"
+        />
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center mb-16 md:mb-24">
+      <div class="order-1 md:order-1">
+        <Image
+          src={aboutImage}
+          alt="Layers of volcanic rock filtering the artesian water"
+          class="rounded-2xl shadow-2xl transition-transform duration-500 hover:scale-[1.02]"
+          width={700}
+          height={700}
+          loading="eager"
+        />
+      </div>
+      <div class="order-2 md:order-2 space-y-4">
+        <p class="text-xl md:text-2xl leading-relaxed text-gray-700">
+          Each layer softens, purifies, and enriches the water with the island’s
+          own minerals. By the time it reaches the Kea‘au artesian aquifer, it
+          has completed a journey through nearly 13,000 vertical feet of
+          volcanic rock — not in drilling depth, but in transformation.
+        </p>
+      </div>
+    </div>
+
+    <div class="mx-auto max-w-3xl text-center space-y-6 md:space-y-8">
+      <p class="text-xl leading-relaxed text-gray-700">
+        At the base of that journey lies our artesian source, sealed beneath
+        dense volcanic stone roughly 1,200 feet below ground. There, natural
+        pressure holds the water in a protected chamber, shielded from the
+        surface and untouched by machinery. When released, it rises on its own —
+        pure, balanced, and alive with the geology that created it.
+      </p>
+      <p class="text-xl leading-relaxed font-bold text-gray-800">
+        That’s the truth behind both numbers: <strong>13,000 feet of natural filtration.
+        1,200 feet of living protection.</strong> One describes the journey. The other,
+        the source. Together, they define what makes Hawaiian Springs unlike any
+        other water on earth.
+      </p>
+      <p class="bs-h3 uppercase leading-relaxed text-black/80 mt-8">
+        Never Filtered Tap. Never Tankered.
+      </p>
+      <p class="bs-h3 text-black/80 mt-4">
+        Hawaiian Springs. Hawai‘i’s original
+        bottled water — the only one bottled at the source.
+      </p>
+    </div>
+
+    <div class="mt-12 md:mt-16">
+      <HSWicons />
+    </div>
+  </section>
+</Layout>

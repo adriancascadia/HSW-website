@@ -1,11 +1,22 @@
-import Swiper from "swiper";
-import "swiper/css";
+import Swiper from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
+// import Swiper and modules styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
-const prev_btn = document.querySelector(".js-fc-btn-prev");
-const next_btn = document.querySelector(".js-fc-btn-next");
-
+// init Swiper:
 const swiper = new Swiper(".js-fc-swiper", {
-  slidesPerView: 1.1,
+  modules: [Navigation, Pagination],
+  navigation: {
+    nextEl: ".js-fc-btn-next",
+    prevEl: ".js-fc-btn-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  slidesPerView: 1,
   spaceBetween: 8,
   speed: 500,
   loop: false,
@@ -25,10 +36,6 @@ const swiper = new Swiper(".js-fc-swiper", {
     },
   },
 });
-
-// Add event listeners to buttons
-prev_btn.addEventListener("click", () => swiper.slidePrev());
-next_btn.addEventListener("click", () => swiper.slideNext());
 
 // Trigger swiper
 swiper.init?.();

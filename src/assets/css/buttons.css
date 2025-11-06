@@ -11,19 +11,20 @@
     focus-visible:outline-none
     focus-visible:ring-2
     focus-visible:ring-white/75
-    font-semibold
-    px-5
-    py-4
-    rounded-md
-    text-bs-foreground-light
+    font-bold
+    px-4
+    py-3
+    rounded-2xl
+    text-bs-surface-1
     text-center
+    uppercase
     transition-all
     relative
     overflow-clip
     before:flex
     before:inset-0
     before:bg-white
-    before:rounded-sm
+    before:rounded-lg
     before:absolute
     before:opacity-0
     before:-translate-x-full

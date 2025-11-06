@@ -1,31 +1,28 @@
 ---
-import Image from "astro/components/Image.astro";
-import Bottle500 from "../assets/500ml.png";
-import Bottle750 from "../assets/750ml.png";
-import Bottle1L from "../assets/1-L.png";
-import Bottle15 from "../assets/1.5-L.png";
+import products from "../data/products.json";
 const HSWurl =
   "https://www.amazon.com/-/es/stores/HawaiianSprings/page/E8A5266D-C2E3-48CD-A46D-82BECD05A399";
 ---
 
-<section class="flex flex-col justify-center items-center py-20 px-10">
+<section id="shop" class="flex flex-col justify-center items-center py-20 px-10">
   <h2 class="bs-h2 text-[color:var(--accent)] mb-10 text-center">
     Shop Hawaiian Springs
   </h2>
 
   <div class="grid gird-cols-2 md:grid-cols-4 gap-8 w-full max-w-6xl">
-    <div
+    {products.map((item)=>(
+      <div
       class="flex flex-col justify-end
                     rounded-3xl bg-[color:var(--powderblue)]
                     h-auto md:h-[500px] w-auto p-10"
     >
       <div class="flex flex-col items-center">
-        <Image
-          src={Bottle500}
-          alt="500ml Bottle"
+        <img
+          src={item.image}
+          alt={item.image_alt}
           class="w-1/4 md:w-1/2 h-auto mb-4"
         />
-        <h2 class="text-xl font-bold">500ml</h2>
+        <h2 class="bs-h3 text-bs-surface-0">{item.title}</h2>
         <a
           href={HSWurl}
           class="bs-btn inline-block bg-bs-suface-2 text-white px-4 py-2 rounded-full mt-4"
@@ -34,57 +31,8 @@ const HSWurl =
         </a>
       </div>
     </div>
-
-    <div
-      class="flex flex-col justify-end
-                    rounded-3xl bg-[color:var(--powderblue)]
-                    h-auto md:h-[500px] w-full p-10"
-    >
-      <div class="flex flex-col items-center">
-        <Image src={Bottle750} alt="750ml Bottle" class="w-20 h-auto mb-4" />
-        <h2 class="text-xl font-bold">750ml</h2>
-        <a
-          href={HSWurl}
-          class="bs-btn inline-block bg-bs-suface-2 text-white px-4 py-2 rounded-full mt-4"
-        >
-          Buy Now
-        </a>
-      </div>
-    </div>
-
-    <div
-      class="flex flex-col justify-end
-                    rounded-3xl bg-[color:var(--powderblue)]
-                    h-auto md:h-[500px] w-full p-10"
-    >
-      <div class="flex flex-col items-center">
-        <Image src={Bottle1L} alt="1L Bottle" class="w-25 h-auto mb-4" />
-        <h2 class="text-xl font-bold">1L</h2>
-        <a
-          href={HSWurl}
-          class="bs-btn inline-block bg-bs-suface-2 text-white px-4 py-2 rounded-full mt-4"
-        >
-          Buy Now
-        </a>
-      </div>
-    </div>
-
-    <div
-      id="shop"
-      class="flex flex-col justify-end
-                    rounded-3xl bg-[color:var(--powderblue)]
-                    h-auto md:h-[500px] w-full p-10"
-    >
-      <div class="flex flex-col items-center">
-        <Image src={Bottle15} alt="1.5L Bottle" class="w-23 h-auto mb-4" />
-        <h2 class="text-[color:var--accent)] text-xl font-bold">1.5L</h2>
-        <a
-          href={HSWurl}
-          class="bs-btn inline-block bg-bs-suface-2 text-white px-4 py-2 rounded-full mt-4"
-        >
-          Buy Now
-        </a>
-      </div>
-    </div>
+      
+    ))}
+    
   </div>
 </section>

@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import About from "../components/About.astro";
+import Origin from "../components/Origin.astro";
 import Carousel from "../components/Carousel.astro";
 import HeroSection from "../components/HeroSection.astro";
 import FaqSection from "../components/FaqSection.astro"
@@ -8,7 +8,6 @@ import TestimonialsSection from "../components/TestimonialsSection.astro";
 import WaterFiltration from "../components/WaterFiltration.astro";
 import global_settings from "../data/global_settings.json"
 import home from "../data/home.json";
-import cases from "../data/cases.json";
 import testimonials from "../data/testimonials.json"
 import faq from "../data/faq.json";
 import CardHSW from "../components/CardHSW.astro"
@@ -25,41 +24,15 @@ import Contact from "../components/Contact.astro";
     title={ home.hero_title }
   />
 
-  <About />
+  <Origin />
 
   <Sustainability />
 
   <Shop />
 
   <Carousel
-    cases={ cases }
     title={ home.cases_title }
   />
-
-  <!-- <ClientsSection
-    clients={ clients }
-    title={ home.clients_title }
-  />
-
-  <QuoteSection
-    cite={ home.quote_cite }
-    content={ home.quote_content }
-    image={ home.quote_image }
-    role={ home.quote_role }
-  />
-
-  <CaseStudiesSection
-    caseStudies={ caseStudies }
-    title={ home.case_studies_title }
-  />
-
-
-  <PricingSection
-    pricing={ pricing }
-    title={ home.pricing_title }
-  />
-
-  <NewsletterSection newsletter={newsletter} /> -->
 
   <FaqSection
     faq={ faq }

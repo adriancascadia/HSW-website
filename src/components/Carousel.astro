@@ -1,22 +1,25 @@
 ---
-import cases from "../data/cases.json";
 import Arrow from "../assets/theme-images/icon-arrow.svg";
+import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
+const allCases = await getCollection("cases");
 const { title } = Astro.props;
 ---
 
-<section id="our-water">
+<section id="our-water" class="relative">
   <!-- Header -->
   <div
-    class="bs-container flex items-center justify-between"
+    class="bs-container flex items-center justify-center"
   >
-  { title && <h2 class="bs-h1 text-center md:text-left text-[color:var(--accent)]" set:html={ title } />}
+  { title && <h2 class="bs-h1 text-center text-bs-surface-2" set:html={ title } />}
+  </div>
 
-    <!-- Buttons -->
-    <nav class="bs-st-button-wrapper flex justify-center gap-4">
+  <!-- Buttons -->
+    <nav class="bs-st-button-wrapper absolute z-20 w-full h-full pointer-events-none flex justify-between items-center top-0 left-0 px-4 md:px-8">
       {/* Prev */}
       <button
         aria-label="Previous slide"
-        class="js-fc-btn-prev group bs-btn rounded-full !p-0 flex items-center justify-center h-10 w-10 md:h-12 md:w-12"
+        class="js-fc-btn-prev group bs-btn rounded-full !p-0 flex items-center justify-center h-10 w-10 md:h-12 md:w-12 pointer-events-auto shadow-lg hover:shadow-xl transition"
       >
         <Arrow
           class="opacity-60 h-4 w-4 -translate-x-[2px] group-active:translate-y-[1px]"
@@ -28,7 +31,7 @@ const { title } = Astro.props;
       {/* Next (flip horizontal correcto en v4) */}
       <button
         aria-label="Next slide"
-        class="js-fc-btn-next group bs-btn rounded-full !p-0 flex items-center justify-center h-10 w-10 md:h-12 md:w-12 scale-x-[-1]"
+        class="js-fc-btn-next group bs-btn rounded-full !p-0 flex items-center justify-center h-10 w-10 md:h-12 md:w-12 scale-x-[-1] pointer-events-auto shadow-lg hover:shadow-xl transition"
       >
         <Arrow
           class="opacity-60 h-4 w-4 -translate-x-[2px] group-active:translate-y-[1px]"
@@ -37,21 +40,20 @@ const { title } = Astro.props;
         />
       </button>
     </nav>
-  </div>
 
   <!-- Slides -->
-  <div class="js-fc-swiper swiper select-none bs-mt-md">
+  <div class="js-fc-swiper swiper select-none bs-mt-sm">
     <div class="swiper-wrapper">
       {
-        cases.map((item) => (
+        allCases.map((item) => (
           // Slides
 
           <div class="swiper-slide bg-bs-surface-0 border border-bs-surface-3 rounded-xl overflow-hidden !h-auto">
             <figure class="flex flex-col gap-6 isolate min-h-[50svh] md:min-h-[40rem] h-full">
               {/* BG image */}
-              <img
-                src={item.image}
-                alt={item.image_alt}
+              <Image
+                src={item.data.image}
+                alt={item.data.image_alt}
                 loading="lazy"
                 class={`rounded-xl ${item.competitors ? "opacity-40 md:opacity-80 grayscale" : "opacity-100 md:opacity-100 full-color"} overflow-hidden w-full h-full object-cover object-left absolute inset-0`}
                 height="1024"
@@ -66,27 +68,28 @@ const { title } = Astro.props;
                 class={`z-10 p-6 sm:p-10 md:p-20 max-w-xl flex flex-col gap-6 h-full text-white`}
               >
                 {/* Title */}
-                <h2 class="bs-h2" set:html={item.title} />
+                <h2 class="bs-h2" set:html={item.data.title} />
 
                 {/* Intro */}
                 <div
                   class="bs-body-text text-pretty flex-1"
-                  set:html={item.content}
+                  set:html={item.data.description}
                 />
 
                 {/* Cta */}
-                <button
+                <a
                   class="inline-block self-start bg-[color:var(--accent)] text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-[color:var(--accent-dark)] transition duration-300"
-                  onclick="demo.showModal()"
+                  href="/ourwater"
                 >
-                  {item.cta}
-                </button>
+                  {item.data.cta}
+                </a>
               </figcaption>
             </figure>
           </div>
         ))
       }
     </div>
+    <div class="swiper-pagination !bottom-4"></div>
   </div>
 </section>
 
@@ -101,6 +104,8 @@ const { title } = Astro.props;
     to {
       opacity: 1;
     }
+
+    
   }
 
   @supports (animation-timeline: view()) {
@@ -110,4 +115,32 @@ const { title } = Astro.props;
       animation-timeline: view(20% block);
     }
   }
+
+  /* ... (Tus estilos de animación y otros) ... */
+
+.swiper-pagination {
+  position: relative ; /* Asegura que la posición sea relativa al flujo del DOM */
+  bottom: auto ;
+  top: auto ;
+  margin-top: 1.5rem; /* Espacio entre el carrusel y los dots */
+  display: flex;
+  justify-content: center;
+}
+
+/* Estilo para los puntos inactivos */
+.swiper-pagination-bullet {
+  /* Usamos @apply para bs-surface-0 (color de fondo) */
+  background: #000;: aquamarine;
+  width: 10px ;
+  height: 10px ;
+  margin: 0 4px ; /* Espaciado entre puntos */
+  transition: all 0.3s;
+}
+
+/* Estilo para el punto activo */
+.swiper-pagination-bullet-active {
+  /* Usamos @apply para bs-surface-2 (color de acento) */
+  color: blueviolet;
+  transform: scale(1.1);
+}
 </style>

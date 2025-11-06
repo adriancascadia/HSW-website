@@ -14,7 +14,7 @@
 }
 
 .bs-h4 {
-  @apply font-especial font-bold text-balance text-sm md:text-sm lg:text-xl;
+  @apply font-especial font-extrabold text-balance text-sm md:text-sm lg:text-xl;
 }
 
 .bs-icons {
@@ -23,4 +23,20 @@
 
 .bs-body-text {
   @apply font-body leading-relaxed;
+}
+
+h1 {
+  @apply font-body font-extrabold text-balance text-3xl sm:text-3xl md:text-3xl lg:text-4xl leading-[1];
+}
+
+h2 {
+  @apply font-display font-extrabold text-balance text-4xl md:text-4xl;
+}
+
+h3 {
+  @apply font-display font-bold text-balance text-lg md:text-xl;
+}
+
+h4 {
+  @apply font-especial font-extrabold text-balance text-sm md:text-sm lg:text-xl;
 }
