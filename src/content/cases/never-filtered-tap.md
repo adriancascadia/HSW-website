@@ -6,12 +6,12 @@ image: "../../assets/filteredtap.jpg"
 image_alt: ""
 competitors: true
 ---
-They say all bottled water is the same.
-**Not really.**
+### They say all bottled water is the same.
+### **Not really.**
 
 Some of it’s just filtered tap — and some is even shipped in tanks to be bottled somewhere else.
 
-Hawaiian Springs is different.
+### Hawaiian Springs is different.
 
 Rain falls on Hawaii’s Big Island and journeys through 13,000 feet of volcanic rock, picking up natural minerals along the way.
 
@@ -21,6 +21,6 @@ That’s why it’s authentic. Pure. Truly Hawaiian.
 
 Hawaiian Springs. Hawai‘i’s original bottled water — the only one bottled at the source.
 
-Not filtered tap. Never tankered.
+### **Not filtered tap. Never tankered.**
 
-Know your water. Choose authenticity.
+**Know your water. Choose authenticity.**

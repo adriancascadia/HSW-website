@@ -11,9 +11,7 @@ const { settings } = Astro.props;
     <!-- Logo -->
     <a class="flex group" href="/" aria-label={settings.title + " - Home"}>
       <Logo
-        class="text-[color:var(--accent)] hover:text-[color:var(--aquasky)] transition-transform ease-bs-spring duration-1000"
-        height="100"
-        width="150"
+        class="text-[color:var(--accent)] hover:text-[color:var(--aquasky)] transition-transform ease-bs-spring duration-1000 w-50 md:w-60"
       />
     </a>
     <Menu />
@@ -24,7 +22,7 @@ const { settings } = Astro.props;
     {
       settings.nav.map((item) => (
         <a
-          class="block p-2 md:p-5 bs-h3 text-center w-auto text-[color:var(--accent)] !bg-transparent before:translate-y-full hover:before:translate-y-0"
+          class="block p-2 md:p-5 bs-h4 text-center w-auto text-[color:var(--accent)] !bg-transparent before:translate-y-full hover:before:translate-y-0"
           href={item.link}
         >
           {item.title}

@@ -18,30 +18,30 @@ const cases = await Promise.all(
 ---
 
 <section id="community" class="text-white">
-        <div class="mx-auto max-w-5xl px-4 py-8 md:py-10">
+        <div class="flex flex-col items-center mx-auto max-w-5xl px-4 py-8 md:py-10">
         
         { cases.map((item) => (
           
-          <div class="group relative h-40 w-[88%] -ml-2 md:-ml-6 rounded-2xl bg-[color:var(--accent)]/95 overflow-hidden">
-<div class="p-10">
-            <h2 class="bs-h2">{item.data.title}</h2>
+          <div class="group self-start z-1 h-[30%] w-[80%] -ml-2 md:-ml-6 rounded-2xl bg-bs-surface-2 overflow-hidden">
+<div class="p-5">
+            <h2 class="bs-h3 uppercase">{item.data.title}</h2>
             </div>        <span class="pointer-events-none absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-[120%] transition-transform duration-[1600ms] ease-out group-hover:translate-x-[120%]"></span>
          </div>
          
 
           <figure
-            class="relative z-10 -mt-10 shadow-xl overflow-hidden border border-black/5 rounded-3xl"
+            class="relative -mt-10 shadow-xl overflow-hidden border border-black/5 rounded-3xl"
           >
             <Image
               src={item.data.image}
               alt={item.data.image_alt}
-              class="block w-full h-[360px] md:h-[420px] object-cover transition-transform duration-500 ease-[cubic-bezier(.2,.8,.2,1)] hover:scale-[1.05] will-change-transform"
+              class="block w-full h-[360px] md:h-[500px] object-cover transition-transform duration-500 ease-[cubic-bezier(.2,.8,.2,1)] hover:scale-[1.05] will-change-transform"
               loading="eager"
             />
 
           </figure>
 
-        <div class="mt-8 bs-body-text text-bs-surface-0">
+        <div class="flex flex-col gap-1 text-center w-[70%] items-center m-10 bs-body-text text-bs-surface-0">
           <item.Content/>
           
         </div>
