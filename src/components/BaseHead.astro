@@ -29,6 +29,8 @@ const { title, description, image = FallbackImage } = Astro.props;
 />
 <meta name="generator" content={Astro.generator} />
 
+<meta property="og:image" content="/favicon.svg">
+
 <!-- Font preloads -->
 <link rel="preload" href="/assets/fonts/LeagueSpartan.ttf" as="font" type="font/ttf" crossorigin />
 <link rel="preload" href="/assets/fonts/Gidole-Regular.ttf" as="font" type="font/ttf" crossorigin />
@@ -51,6 +53,7 @@ const { title, description, image = FallbackImage } = Astro.props;
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={new URL(image.src, Astro.url)} />
+
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
