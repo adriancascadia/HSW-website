@@ -15,11 +15,11 @@ const { title } = Astro.props;
   </div>
 
   <!-- Buttons -->
-    <nav class="bs-st-button-wrapper absolute z-20 w-full h-full pointer-events-none flex justify-between items-center top-0 left-0 px-4 md:px-8">
+    <nav class="bs-st-button-wrapper absolute z-10 w-full h-full flex justify-between items-center top-0 left-0 px-2 md:px-8">
       {/* Prev */}
       <button
         aria-label="Previous slide"
-        class="js-fc-btn-prev group bs-btn rounded-full !p-0 flex items-center justify-center h-10 w-10 md:h-12 md:w-12 pointer-events-auto shadow-lg hover:shadow-xl transition"
+        class="js-fc-btn-prev group bs-btn-c rounded-full !p-0 flex items-center justify-center h-10 w-10 md:h-12 md:w-12"
       >
         <Arrow
           class="opacity-60 h-4 w-4 -translate-x-[2px] group-active:translate-y-[1px]"
@@ -31,7 +31,7 @@ const { title } = Astro.props;
       {/* Next (flip horizontal correcto en v4) */}
       <button
         aria-label="Next slide"
-        class="js-fc-btn-next group bs-btn rounded-full !p-0 flex items-center justify-center h-10 w-10 md:h-12 md:w-12 scale-x-[-1] pointer-events-auto shadow-lg hover:shadow-xl transition"
+        class="js-fc-btn-next group bs-btn-c rounded-full !p-0 flex items-center justify-center h-10 w-10 md:h-12 md:w-12 -scale-x-100"
       >
         <Arrow
           class="opacity-60 h-4 w-4 -translate-x-[2px] group-active:translate-y-[1px]"
@@ -104,7 +104,6 @@ const { title } = Astro.props;
     to {
       opacity: 1;
     }
-
     
   }
 
@@ -112,7 +111,7 @@ const { title } = Astro.props;
     .bs-st-button-wrapper {
       opacity: 0;
       animation: show-buttons linear forwards;
-      animation-timeline: view(20% block);
+      animation-timeline: view(30% block);
     }
   }
 
@@ -122,7 +121,7 @@ const { title } = Astro.props;
   position: relative ; /* Asegura que la posición sea relativa al flujo del DOM */
   bottom: auto ;
   top: auto ;
-  margin-top: 1.5rem; /* Espacio entre el carrusel y los dots */
+  margin-top: 2rem; /* Espacio entre el carrusel y los dots */
   display: flex;
   justify-content: center;
 }

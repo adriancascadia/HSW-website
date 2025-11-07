@@ -16,7 +16,7 @@ const swiper = new Swiper(".js-fc-swiper", {
     el: ".swiper-pagination",
     clickable: true,
   },
-  slidesPerView: 1,
+  slidesPerView: 1.2,
   spaceBetween: 8,
   speed: 500,
   loop: false,

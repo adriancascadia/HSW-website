@@ -5,48 +5,64 @@ import Alkaline from "../assets/theme-images/alkaline.svg";
 import Kosher from "../assets/theme-images/kosher.svg";
 import Sustainable from "../assets/theme-images/sustainable.svg";
 import Recycle from "../assets/theme-images/recycle.svg";
+import ScrollReveal from "./ScrollReveal.astro";
 ---
 
 <section class="mt-10 ">
   <div class="grid grid-cols-3 text-center md:grid-cols-6">
+    <ScrollReveal delay="0">
     <div class="flex flex-col items-center pb-3 px-2">
       <Bottled
         class="w-30 h-30 text-[color:var(--accent)] hover:text-[color:var(--aquasky)]"
       />
       <p class="bs-icons text-[color:var(--accent)] -mt-7">BOTTLED ON HAWAII</p>
     </div>
+    </ScrollReveal>
 
+    <ScrollReveal delay="500">
     <div class="flex flex-col items-center pb-3 px-2">
       <Filtered
         class="w-30 h-30 text-[color:var(--accent)] hover:text-[color:var(--aquasky)]"
       />
       <p class="bs-icons text-[color:var(--accent)] -mt-7">LAVA ROCK FILTERED</p>
     </div>
+    </ScrollReveal>
 
+    <ScrollReveal delay="1000">
     <div class="flex flex-col items-center pb-3 px-2">
       <Alkaline
         class="w-30 h-30 text-[color:var(--accent)] hover:text-[color:var(--aquasky)]"
       />
       <p class="bs-icons text-[color:var(--accent)] -mt-7">NATURALLY ALKALINE</p>
     </div>
+    </ScrollReveal>
 
+    <ScrollReveal delay="1500">
     <div class="flex flex-col items-center pb-3 px-2">
       <Kosher
         class="w-30 h-30 text-[color:var(--accent)] hover:text-[color:var(--aquasky)]"
       />
       <p class="bs-icons text-[color:var(--accent)] -mt-7">KOSHER</p>
     </div>
+    </ScrollReveal>
+
+    <ScrollReveal delay="2000">
     <div class="flex flex-col items-center pb-3 px-2">
       <Sustainable
         class="w-30 h-30 text-[color:var(--accent)] hover:text-[color:var(--aquasky)]"
       />
       <p class="bs-icons text-[color:var(--accent)] -mt-7">SUSTAINABLE RESOURCE</p>
     </div>
+    </ScrollReveal>
+
+    <ScrollReveal delay="2500">
     <div class="flex flex-col items-center pb-3 px-2">
       <Recycle
         class="w-30 h-30 text-[color:var(--accent)] hover:text-[color:var(--aquasky)]"
       />
       <p class="bs-icons text-[color:var(--accent)] -mt-7">PLEASE RECYCLE</p>
     </div>
+    </ScrollReveal>
+
   </div>
 </section>

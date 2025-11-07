@@ -1,95 +1,105 @@
 ---
 import Image from "astro/components/Image.astro";
-
 import bg_image from "../assets/sustainability.webp";
 import bottleImage from "../assets/theme-images/500ml.png";
-// Importa tus SVGs
 import PacificOcean from "../assets/theme-images/PacificOcean.svg";
 import TropicalRain from "../assets/theme-images/TropicalRain.svg";
 import Mountains from "../assets/theme-images/Mountains.svg";
 import Volcano from "../assets/theme-images/Volcano.svg";
 import HawaiianVolcano from "../assets/theme-images/HawaiianVolcano.svg";
 import WaterSource from "../assets/theme-images/WaterSource.svg";
-import Arrow1 from "../assets/arrow1.svg"
-import Arrow2 from "../assets/arrow2.svg"
-import Arrow3 from "../assets/arrow3.svg"
-import Arrow4 from "../assets/arrow4.svg"
-// Componente para manejar la animación de aparición
+import Arrow1 from "../assets/arrow1.svg";
+import Arrow2 from "../assets/arrow2.svg";
+import Arrow3 from "../assets/arrow3.svg";
+import Arrow4 from "../assets/arrow4.svg";
 import ScrollReveal from "./ScrollReveal.astro";
-
-// Nota: Las flechas y las líneas curvas se tendrían que añadir.
-// Para este ejemplo, solo posicionaremos los iconos/SVGs principales.
 ---
 
-<section id="sustainability" class="relative h-screen w-full">
+<section
+  id="sustainability"
+  class="relative flex flex-col justify-between w-full"
+>
   <Image
     src={bg_image}
     alt="Fondo montañoso"
     format="webp"
-    class="absolute object-cover w-full h-[100vh] object-contain -z-10"
+    class="absolute object-cover w-full h-full object-contain -z-10"
     loading="eager"
   />
-  <div class="absolute inset-0 bg-gradient-to-b from-black/50 to-transparent"></div>
-  <div class="absolute top-0 inset-x-0 h-[30%] px-8 pt-1 md:px-20 md:pt-5">
-    <h1 class="mt-6 text-4xl font-bold text-white">Sustainability</h1>
-    <p class="mt-3 max-w-md text-white text-balance md:text-2xl md:max-w-xl">
-      Born from a 13,000-foot volcanic aquifer, naturally filtered through lava rock, mineral-rich, and bottled at the source
+  <div
+    class="absolute inset-0 w-full -z-10 bg-gradient-to-b from-black/60 to-transparent"
+  >
+  </div>
+
+  <div class="mx-2 md:mx-20 ">
+    <h1 class="mt-6 bs-h2 text-white">Sustainability</h1>
+    <p class="mt-3 bs-body-text text-white">
+      Born from a 13,000-foot volcanic aquifer, naturally filtered through lava
+      rock, mineral-rich, and bottled at the source
     </p>
   </div>
 
-  <div class="relative top-[20%] w-full min-h-[80vh]">
-    <div class="absolute top-0 md:top-[10%] md:left-[10%] left-0">
+  <div
+    class="flex flex-col items-center gap-3 py-5 lg:px-20"
+  >
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 w-full place-items-center">
       <ScrollReveal delay="0">
-        <PacificOcean class="size-44 text-white" />
+        <PacificOcean class="w-[18vw] md:w-[13vw] lg:w-[8vw] text-white" />
       </ScrollReveal>
-    </div>
-    <div class="flex absolute top-8 right-[10%] md:top-[15%] md:right-[45%] lg:right-[60%]">
-      <ScrollReveal delay="500">
-        <Arrow1 class="absolute w-[50%] right-[90%]"/>
-        <TropicalRain class="size-32 text-white" />
-      </ScrollReveal>
-    </div>
-    <div class="absolute top-[28%] left-[10%] md:top-[17%] md:left-[65%] lg:top-[10%] lg:left-[45%]">
-      <ScrollReveal delay="1000">
-        <Arrow2 class="absolute w-[30%] -top-4 -right-7 rotate-140 md:rotate-0 md:w-[50%] md:right-[90%]"/>
-        <Mountains class="size-40 text-white" />
-      </ScrollReveal>
-    </div>
-    <div class="absolute top-[25%] right-0 md:top-[32%] md:right-[35%] lg:top-[10%] lg:right-[15%]">
-    <ScrollReveal delay="1500">
-      <Arrow3 class="absolute w-[30%] top-10 right-30 md:rotate-110 md:-right-15 md:top-14 lg:right-50 lg:top-14 lg:rotate-0"/>
-      <Volcano class="size-60 md:size-80 text-white" />
-    </ScrollReveal>
-  </div>
-  <div class="absolute bottom-[32%] right-[10%]">
-    <ScrollReveal delay="2000">
-            <Arrow4 class="absolute w-[20%] -top-5 -right-10 rotate-0 md:-top-20 md:right-10 md:-rotate-45 lg:-top-20 lg:right-10 lg:-rotate-0"/>
 
-      <HawaiianVolcano class="w-56 h-24 text-white" />
-    </ScrollReveal>
-  </div>
-  <div class="absolute bottom-[5%] left-[30%] lg:left[1%]">
+      <div class="flex items-center justify-start">
+        <ScrollReveal delay="500">
+          <Arrow1 class="-ml-[15vw] w-[8vw] lg:-ml-[10vw] lg:w-[4vw]" />
+        </ScrollReveal>
+        <ScrollReveal delay="500">
+          <TropicalRain class=" w-[20vw] md:w-[13vw] lg:w-[8vw] text-white" />
+        </ScrollReveal>
+      </div>
+
+      <div class="flex">
+      <ScrollReveal delay="1000">
+        <Mountains class="mt-5 ml-[20vw] lg:ml-0 lg:mt-15 w-[20vw] md:w-[13vw] lg:w-[8vw] text-white" />
+      </ScrollReveal>
+      <ScrollReveal delay="1000">
+        <Arrow2
+          class="lg:mt-20 lg:-ml-[17vw] rotate-110 lg:rotate-0 w-[10vw] lg:w-[5vw]"
+        />
+      </ScrollReveal>
+      </div>
+
+      <div class="relative lg:top-30 flex flex-col gap-6">
+        <ScrollReveal delay="1500">
+          <Arrow3 class="w-[10vw] lg:w-[5vw]" />
+        </ScrollReveal>
+        <ScrollReveal delay="1500">
+          <Volcano class="w-[35vw] md:w-[13vw] lg:w-[15vw] text-white" />
+        </ScrollReveal>
+        <div class="flex">
+        <ScrollReveal delay="2000">
+          <HawaiianVolcano
+            class="-ml-10 lg:-ml-30 w-[40vw] md:w-[13vw] lg:w-[15vw] text-white"
+          />
+        </ScrollReveal>
+        <ScrollReveal delay="1700">
+          <Arrow4 class="w-[5vw] lg:w-[2vw]" />
+        </ScrollReveal>
+        </div>
+      </div>
+    </div>
     <ScrollReveal delay="2500">
-      <WaterSource class="size-64 md:size-100 inset-y-0 text-white" />
+      <WaterSource class="pt-5 lg:pt-20 w-[50vw] md:w-[50vw] lg:w-[40vw] text-white" />
     </ScrollReveal>
   </div>
-  </div>
-  <div class="absolute bottom-0 flex flex-row md:flex-row items-center justify-center bg-[color:var(--accent)] w-full h-20 z-1">
+  <div class="flex flex-row justify-center items-center bg-bs-surface-2 w-full h-[15vw] md:h-[10vw] lg:h-[6vw] z-1">
     <Image
       src={bottleImage}
       alt="Sustainability Bottle"
-      class="absolute bottom-0 left-[3%] md:left-[10%] lg:left-[20%] h-80 w-auto object-contain"
+      class="absolute bottom-0 left-[5vw] md:left-[15vw] w-[20vw] md:w-[10vw] lg:w-[10vw] object-contain"
       width={150}
       height={250}
       loading="eager"
     />
-    <div
-      class="flex flex-col md:flex-row items-center justify-center"
-    >
-      <p class="text-xl text-balance font-bold text-white">
-        Never Filtered Tap.
-      </p>
-      <p class="text-xl text-balance font-bold text-white">Never Tankered.</p>
-    </div>
+      <p class="w-1/2 text-base md:text-2xl lg:text-3xl font-bold text-center leading-5 md:leading-8 text-white">Never Filtered Tap. Never Tankered.</p>
+
   </div>
 </section>

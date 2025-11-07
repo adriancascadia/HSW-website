@@ -5,7 +5,7 @@ import Menu from "./BurgerMenu.astro";
 const { settings } = Astro.props;
 ---
 
-<header class="px-5 md:px-10 md:flex justify-between wrapper font-semibold w-full">
+<header class="px-5 lg:px-10 lg:flex justify-between wrapper font-semibold w-full">
   <!-- Wrapper -->
   <div class="flex justify-between items-center">
     <!-- Logo -->
@@ -17,7 +17,7 @@ const { settings } = Astro.props;
     <Menu />
   </div>
   <!-- Nav -->
-  <nav class="w-auto nav-links hidden col-span-6 md:flex md:justify-between items-center">
+  <nav class="w-auto nav-links hidden col-span-6 lg:flex lg:justify-between items-center">
     <!-- Links -->
     {
       settings.nav.map((item) => (
