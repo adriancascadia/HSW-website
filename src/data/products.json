@@ -2,21 +2,25 @@
   {
     "title": "500ml",
     "image": "/content-images/500ml.png",
-    "image_alt": "500ml"
+    "image_alt": "500ml",
+    "width": "60px"
   },
   {
     "title": "750ml",
     "image": "/content-images/750ml.png",
-    "image_alt": "750ml"
+    "image_alt": "750ml",
+    "width": "80px"
   },
   {
     "title": "1L",
     "image": "/content-images/1-L.png",
-    "image_alt": "1L"
+    "image_alt": "1L",
+    "width": "100px"
   },
   {
     "title": "1.5L",
     "image": "/content-images/1.5-L.png",
-    "image_alt": "1.5L"
+    "image_alt": "1.5L",
+    "width": "100px"
   }
 ]

@@ -1,26 +1,90 @@
 [
   {
-    "question": "Where is Our Springs Water sourced? ",
-    "answer": "Our water is the only Hawaiian artesian water bottled exclusively at its source, from deep aquifers on the slopes of Mauna Loa on the Big Island."
+    "question": "Where is Hawaiian Springs water sourced?",
+    "answer": "From a deep artesian aquifer at the base of Mauna Loa on the Big Island of Hawaiʻi. We are the ONLY bottled water in Hawaiʻi that is bottled directly at its source. The water emerges from the earth and flows straight into our bottles, untouched and unaltered."
   },
   {
-    "question": "How is Our Water Naturally filtered?",
-    "answer": "Our water is from deep aquifers on the slopes of Mauna Loa. Heavenly rainfall is naturally filtered through over 13,000 feet of pristine lava rock, slowly gathering essential electrolytes and minerals."
+    "question": "What does 'artesian water' really mean?",
+    "answer": "Think of it as nature's perfect plumbing. Artesian water is naturally filtered and protected in a deep, confined aquifer under pressure. This pressure allows the water to rise naturally without mechanical pumps. It's water that wants to be free, and we're just there to catch it."
   },
   {
-    "question": "Is Hawaiian Springs naturally alkaline?",
-    "answer": "Yes, our water is naturally alkaline with a typical pH of 7.7 or higher. This natural pH level is perfect for hydration and contributes to our clean, smooth, and slightly sweet taste."
+    "question": "Why is being 'bottled at the source' so important?",
+    "answer": "Because water shouldn't have more frequent flyer miles than you do. We are the ONLY bottled water in Hawaiʻi that bottles right where the water emerges. Other brands tanker their water thousands of miles to be bottled on the mainland, a process that compromises purity. We prefer our water fresh, not jet-lagged."
   },
   {
-    "question": "What minerals and electrolytes are naturally in the water?",
-    "answer": "The volcanic filtration process naturally enriches the water with vital minerals and electrolytes, including Silica (37 mg/L), Calcium (6 mg/L), Magnesium (3 mg/L), and Potassium (2 mg/L), with a Total Dissolved Solids (TDS) of 84 mg/L."
+    "question": "What does 'Never Tankered' mean?",
+    "answer": "\"Never Tankered\" means our water doesn't get shipped around in giant containers before it gets to you. It's a common industry shortcut that can ruin a water's natural integrity. We don't do it. Our water's journey is from the earth to the bottle. That's it."
   },
   {
-    "question": "Are your bottles sustainable and BPA-free?",
-    "answer": "Yes, all our bottles are BPA-free and are sustainably packaged using 30% post-consumer recycled content (rPET), demonstrating our commitment to the environment and the preservation of Hawaii's natural resources."
+    "question": "How is Hawaiian Springs different from ALL other water brands in Hawaiʻi?",
+    "answer": "Let's be direct. We are the ONLY bottled water in Hawaiʻi that is both sourced and bottled at its natural artesian spring. Most other \"Hawaiian\" waters are one of two things: filtered municipal tap water with a pretty label, or water that's been tankered off-island for bottling. We are neither. We are real Hawaiian water, bottled where it rises."
   },
   {
-    "question": "How is Hawaiian Springs different from other water brands in Hawaii?",
-    "answer": "We are the only Hawaiian artesian water that is both sourced and bottled directly at the natural spring in Kea'au. Our water is never purified, trucked in bulk, or bottled offshore, which guarantees authentic purity and maintains its unique natural mineral composition."
+    "question": "What is the significance of the Mauna Loa aquifer?",
+    "answer": "The Mauna Loa aquifer is our water's birthplace and its filter. Rain falls on the volcano and begins a years-long journey through 13,000 feet of ancient lava rock. This epic process purifies the water and gives it a unique volcanic signature of minerals. It's a filtration system no factory can ever hope to replicate."
+  },
+  {
+    "question": "How is Hawaiian Springs water filtered?",
+    "answer": "Our water is filtered by a volcano. For years, it moves through thousands of feet of porous lava rock, which naturally removes impurities while imparting essential minerals. We don't use artificial methods like reverse osmosis that strip water of its character. The volcano does all the work; we just bottle the results."
+  },
+  {
+    "question": "What does 'Never Filtered Tap' mean?",
+    "answer": "It means exactly what it says. We don't take tap water, filter it, and call it something special. Many brands do, and they even tell you directly on the label if you look closely. You're just paying for processed municipal water. Ours is the opposite: pure rainfall, naturally filtered through a volcano. It's from a spring, not a sink."
+  },
+  {
+    "question": "How do you guarantee the purity of the water?",
+    "answer": "Our source is our guarantee. It's a deep, confined aquifer, protected by layers of dense volcanic rock from any surface contaminants. By bottling at the source in our state-of-the-art facility, we ensure nothing gets in the way. Our \"Never Tankered\" commitment is central to this promise, ensuring the water remains pristine from the ground to your hand."
+  },
+  {
+    "question": "Is Hawaiian Springs water naturally alkaline?",
+    "answer": "Yes. Our water is naturally alkaline, with a typical pH of 7.7 or higher. This isn't the result of an artificial ionization machine; it's from the natural minerals the water gathers during its long journey through volcanic rock. It's authentic alkalinity, just as nature intended."
+  },
+  {
+    "question": "What minerals are in Hawaiian Springs water?",
+    "answer": "Our water contains the volcano's recipe of minerals and electrolytes. This includes high levels of Silica (37 mg/L), known for promoting healthy hair, skin, and nails, along with essential electrolytes like Calcium (6 mg/L), Magnesium (3 mg/L), and Potassium (2 mg/L). This isn't a formula; it's a fingerprint."
+  },
+  {
+    "question": "What are the health benefits of drinking Hawaiian Springs water?",
+    "answer": "Beyond superior hydration, our water's natural electrolytes help replenish your body, making it ideal for an active lifestyle. The natural alkalinity helps balance your body against acidic diets, and the high silica content is a rare benefit that contributes to the health of your body's connective tissues. It's wellness, born from a volcano."
+  },
+  {
+    "question": "Why does naturally alkaline water matter?",
+    "answer": "Because it's real. Many brands use processing to create alkaline water, but that's not the same. Natural alkalinity, derived from minerals, means you are drinking water in its pure, balanced state. It's about authenticity, not artificial enhancement."
+  },
+  {
+    "question": "What is the TDS (Total Dissolved Solids) level of the water?",
+    "answer": "Hawaiian Springs has a TDS of 84 mg/L. This reflects the perfect amount of beneficial minerals our water absorbs from the lava rock. It's the scientific measure of our water's smooth taste and rich character."
+  },
+  {
+    "question": "What does Hawaiian Springs water taste like?",
+    "answer": "It tastes like real water. You'll notice a uniquely smooth, clean, and slightly sweet finish. Unlike processed waters that taste sterile and flat, the natural minerals in Hawaiian Springs give it a soft mouthfeel and a refreshing, crisp flavor. It's the taste of purity."
+  },
+  {
+    "question": "Why does it taste different from other bottled waters?",
+    "answer": "Taste comes from terroir. Just as the environment shapes the taste of a fine wine, the volcanic rock of Mauna Loa gives our water its one-of-a-kind mineral profile and flavor. The high silica content, in particular, provides its signature smooth finish. This taste can't be copied because it's born from a place, not a process."
+  },
+  {
+    "question": "Are your bottles BPA-free?",
+    "answer": "Yes, absolutely. All our bottles are made from PET plastic, which is 100% free of BPA and any other harmful chemicals. Your water is as pure as the bottle it comes in."
+  },
+  {
+    "question": "What sizes are your bottles available in?",
+    "answer": "Hawaiian Springs comes in 500ml, 750ml, 1L, and 1.5L bottles. We have a size for every part of your day, from the gym to the dinner table."
+  },
+  {
+    "question": "Where can I buy Hawaiian Springs water?",
+    "answer": "You can find us at retailers across Hawaiʻi and in select stores on the mainland. For the most direct way to get the pure taste of Hawaiʻi, you can also order from our website and have it delivered to your door. Check our \"Shop\" page for details."
+  },
+  {
+    "question": "Is Hawaiian Springs Kosher certified?",
+    "answer": "Yes. Our water is certified Kosher, a reflection of the purity of our water and the high standards of our bottling process."
+  },
+  {
+    "question": "How can I tell if my 'Hawaiian' water is authentic?",
+    "answer": "Read the label and ask one simple question: where was it bottled? If it wasn't bottled in Hawaiʻi, it's not the real thing. Be skeptical of vague terms like \"from a Hawaiian source\" or \"purified water.\" We are the ONLY bottled water in Hawaiʻi that is bottled at the source. That's the true test of authenticity."
+  },
+  {
+    "question": "What should I look for on a water bottle label to understand its quality?",
+    "answer": "Look for the truth. First, see where it was bottled. If a \"Hawaiian\" water is bottled in California, it was tankered. Second, look at the water type. \"Artesian\" or \"Spring\" water is natural; \"Purified\" water is often just processed tap water. Don't be fooled by a pretty picture of a waterfall. Demand authenticity. Demand water bottled at the source."
   }
 ]
