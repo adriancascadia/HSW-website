@@ -38,9 +38,9 @@ const { caseStudy } = Astro.props
       <div class="bs-body-text flex-grow text-balance" set:html={ caseStudy.content } />
 
       <!-- CTA -->
-      <a href={ caseStudy.case_study_link } class="bs-btn inline-block self-start @4xl:mt-12">
-        { caseStudy.cta }
-      </a>
+      <button type="button" class="bs-btn inline-block self-start bs-mt-sm" onclick="demo.showModal()">
+              { caseStudy.cta }
+            </button>
 
     </div>
 
