@@ -19,7 +19,7 @@ We bottle it right where it rises — never tankered, never reprocessed.
 
 That’s why it’s authentic. Pure. Truly Hawaiian.
 
-Hawaiian Springs. Hawai‘i’s original bottled water — the only one bottled at the source.
+Hawaiian Springs is the only Hawaiian Artesian water bottled at the source.
 
 ### **Not filtered tap. Never tankered.**
 

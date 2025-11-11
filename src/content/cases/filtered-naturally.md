@@ -32,4 +32,4 @@ Filtered naturally by 13,000 feet of lava rock.
 Bottled at the source in Hawai‘i.
 
 Never Filtered Tap. Never Tankered. Hawaiian Springs.
-Hawai‘i’s original bottled water — the only one bottled at the source.
+Hawaiian Springs is the only Hawaiian Artesian water bottled at the source.

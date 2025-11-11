@@ -34,4 +34,4 @@ It’s not blended, not altered, and not shipped across oceans to be rebottled.
 It’s drawn where it’s born — volcanic, vital, and unmistakably Hawaiian.
 
 ### **Never Filtered Tap. Never Tankered.**
-Hawai‘i’s original bottled water — the only one bottled at the source.
+Hawaiian Springs is the only Hawaiian Artesian water bottled at the source.
